@@ -1,0 +1,578 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --verde-folha: #3A7D44;
+  --terracota: #C97B4A;
+  --azul-ceu: #0355a1;
+  --amarelo-sol: #F2C14E;
+  --bege: #F4EBDD;
+  --branco: #FFFFFF;
+  --texto: #2C2A25;
+  --texto-claro: #6B655A;
+
+  --fonte: "Montserrat", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fonte);
+  color: var(--texto);
+  line-height: 1.6;
+  background: var(--branco);
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: var(--verde-folha);
+}
+
+h1, h2, h3 {
+  line-height: 1.25;
+  margin-top: 0;
+}
+
+.container1 {
+  align-items: start;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  padding: 60px 0;
+}
+
+/* Cabeçalho */
+header {
+  background: var(--branco);
+  border-bottom: 1px solid #e5ddd0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.sustentabilidade {
+ margin-top: 100px;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--verde-folha);
+  text-decoration: none;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+header nav a {
+  text-decoration: none;
+  color: var(--texto);
+  font-weight: bold;
+}
+
+header nav a:hover {
+  color: var(--terracota);
+}
+
+.botao {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid transparent;
+}
+.estrangeiros {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 54px;
+
+}
+
+.educacao-sustentavel{
+  margin-top: 100px;
+}
+
+.textoefoto {
+  display: flex;
+  flex-direction: column;
+  width: 480px;
+  text-align: justify;
+}
+.botao-primario {
+  background: var(--terracota);
+  color: var(--branco);
+}
+
+.botao-secundario {
+  background: transparent;
+  color: var(--verde-folha);
+  border-color: var(--verde-folha);
+}
+
+.botao-secundario:hover {
+  background: var(--verde-folha);
+  color: var(--branco);
+}
+
+.texto1 {
+  text-align: start;
+  width: 400px;
+  font-weight: 500;
+}
+
+#missao {
+  background: #0355A1;
+  height: 500px;
+  color: white;
+}
+
+.incluswao {
+  font-size: 30px;
+}
+
+.missao-visao {
+  margin-top: 20px;
+  font-weight: 500px;
+  width: auto;
+}
+
+.hero {
+  margin-top: 80px;
+  margin-bottom: 100px;
+  padding: 100px;
+  height: 500px;
+}
+
+.educacao-inclusao {
+  background: var(--bege);
+}
+
+.educacao-intro {
+  color: var(--texto-claro);
+}
+
+.educacao-container {
+  width: 0%;
+  max-width: 1200px;
+  min-width: 300px;
+  height: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.educacao-grid {
+ 
+  display: flex;
+  flex-wrap: wrap;
+  gap:14px;
+  margin-top: 40px;
+  width: 1100px;
+  align-items: center;
+  margin:  auto;
+}
+
+.valor {
+  margin-top: 30px;
+  flex: 1 1 120px;
+  background: var(--branco);
+  padding: 15px;
+  width:10px;
+  border-radius: 8px;
+
+  align-items: center;
+  text-align: center;
+  border-top: 4px solid var(--verde-folha);
+}
+
+.valor:nth-child(2) { border-top-color: var(--terracota); }
+.valor:nth-child(3) { border-top-color: var(--azul-ceu); }
+.valor:nth-child(4) { border-top-color: var(--amarelo-sol); }
+
+
+.valor h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.valor p {
+  color: var(--texto-claro);
+  font-size: 0.95rem;
+}
+
+
+footer {
+  background: var(--texto);
+  color: var(--bege);
+  padding: 50px 0 20px;
+}
+
+.footer-colunas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #4a463d;
+}
+
+.footer-colunas > div {
+  flex: 1 1 200px;
+}
+
+footer h4 {
+  color: var(--branco);
+  margin-bottom: 12px;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer li {
+  margin-bottom: 8px;
+}
+
+footer a {
+  color: var(--bege);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--amarelo-sol);
+}
+
+.footer-copyright {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 0.85rem;
+  color: #b3ac9c;
+}
+
+/* Responsividade (original) */
+@media (max-width: 700px) {
+  header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  section {
+    padding: 40px 0;
+  }
+}
+
+/* responsivdade do menu */
+.menu-toggle {
+  display: none;
+  background: var(--verde-folha);
+  color: var(--branco);
+  border: 0;
+  border-radius: 4px;
+  padding: 10px 16px;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.menu-toggle:focus-visible,
+header nav a:focus-visible {
+  outline: 3px solid var(--amarelo-sol);
+  outline-offset: 2px;
+}
+
+@media (max-width: 1000px) {
+  header { position: sticky; top: 0; z-index: 10; }
+
+  header .container {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .menu-toggle { display: block; }
+
+  header nav { display: none; width: 100%; }
+  header nav.aberto { display: block; }
+
+  header nav ul { flex-direction: column; gap: 0; }
+  header nav a {
+    display: block;
+    padding: 12px 0;
+    border-top: 1px solid #e5ddd0;
+  }
+}
+
+/* responsividade */
+.botoes { display: flex; flex-wrap: wrap; gap: 12px; }
+
+.texto1 { width: 100%; max-width: 400px; }
+
+.sustentabilidade-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+
+}
+
+.desafios-educacao {
+  margin-top: 100px;
+  text-align: center;
+}
+.missao-visao,
+
+.desafios-grid,
+.projetos-grid {
+ 
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-top: 50px;
+}
+
+.card1, .desafio, .projeto {
+  background: var(--branco);
+  padding: 24px;
+  border-radius: 8px;
+  border-top: 4px solid var(--verde-folha);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .12);
+}
+
+.card1 p, .desafio p, .projeto p { color: var(--texto-claro); }
+
+@media (max-width: 900px) {
+  #missao, .hero { height: auto; }
+  .hero { padding: 60px 20px; }
+}
+
+@media (max-width: 700px) {
+  .hero { padding: 40px 20px; }
+  .botao { width: 100%; text-align: center; }
+  .footer-colunas { gap: 24px; }
+}
+
+
+.hero { height: auto; padding: 60px 0; }
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.foto { margin: 0; }
+
+.foto img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.foto figcaption {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: var(--texto-claro);
+}
+
+.com-foto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.com-foto.inverso .foto { order: -1; }
+
+.projeto img {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
+.com-foto .foto img,
+.hero-foto img {
+  aspect-ratio: 3 / 2;
+}
+
+
+@media (max-width: 600px) {
+  .hero-grid,
+  .com-foto { grid-template-columns: 1fr; }
+  .com-foto.inverso .foto { order: 0; }
+  .hero-foto { order: -1; }
+}
+
+
+.saiba-mais { margin-top: 28px; }
+
+#missao .botao-secundario {
+  color: var(--branco);
+  border-color: var(--branco);
+}
+#missao .botao-secundario:hover {
+  background: var(--branco);
+  color: var(--azul-ceu);
+}
+
+.botao:focus-visible {
+  outline: 3px solid var(--amarelo-sol);
+  outline-offset: 2px;
+}
+
+
+footer .botao-secundario {
+  color: var(--bege);
+  border-color: var(--bege);
+}
+footer .botao-secundario:hover {
+  background: var(--amarelo-sol);
+  border-color: var(--amarelo-sol);
+  color: var(--texto);
+}
+
+
+@media (min-width: 1001px) {
+  header .container {
+    max-width: 1500px;
+    flex-wrap: nowrap;
+    gap: 16px;
+  }
+
+  header .logo { flex-shrink: 0; }
+
+  header nav ul {
+    flex-wrap: nowrap;
+    gap: clamp(8px, 1vw, 18px);
+  }
+
+  header nav a {
+    font-size: clamp(10px, 1vw, 14.5px);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+}
+
+
+.footer-colunas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  text-align: center;
+}
+
+footer h4 { margin-top: 0; }
+
+@media (max-width: 700px) {
+  .footer-colunas {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+
+#missao {
+  background: linear-gradient(135deg, #0355A1 0%, #145AC4 100%);
+  height: auto;
+  padding: 80px 0;
+}
+
+#missao .quem-somos {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 0;
+}
+
+#missao .quem-somos::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  margin: 12px auto 0;
+
+  border-radius: 2px;
+}
+
+#missao .missao-visao {
+  margin-top: 40px;
+  counter-reset: card;
+}
+
+#missao .missao-visao > div {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 28px 24px;
+  
+}
+
+
+#missao .saiba-mais {
+  text-align: center;
+  margin-top: 40px;
+}
+
+
+.cta {
+  background: var(--verde-folha);
+  color: var(--branco);
+  text-align: center;
+}
+
+.cta .container { max-width: 800px; }
+
+.cta h2 { font-size: 2rem; }
+
+.cta p {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.cta .botao-secundario {
+  color: var(--branco);
+  border-color: var(--branco);
+}
+
+.cta .botao-secundario:hover {
+  background: var(--branco);
+  color: var(--verde-folha);
+}

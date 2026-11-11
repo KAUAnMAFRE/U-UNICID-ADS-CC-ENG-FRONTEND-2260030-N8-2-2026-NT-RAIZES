@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fontes e Contato — Raízes</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --verde-folha: #3A7D44;
+  --terracota: #C97B4A;
+  --azul-ceu: #0355a1;
+  --amarelo-sol: #F2C14E;
+  --bege: #F4EBDD;
+  --branco: #FFFFFF;
+  --texto: #2C2A25;
+  --texto-claro: #6B655A;
+
+  --fonte: "Montserrat", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fonte);
+  color: var(--texto);
+  line-height: 1.6;
+  background: var(--branco);
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: var(--verde-folha);
+}
+
+h1, h2, h3 {
+  line-height: 1.25;
+  margin-top: 0;
+}
+
+.container1 {
+  align-items: start;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  padding: 60px 0;
+}
+
+/* Cabeçalho */
+header {
+  background: var(--branco);
+  border-bottom: 1px solid #e5ddd0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.sustentabilidade {
+ margin-top: 100px;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--verde-folha);
+  text-decoration: none;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+header nav a {
+  text-decoration: none;
+  color: var(--texto);
+  font-weight: bold;
+}
+
+header nav a:hover {
+  color: var(--terracota);
+}
+
+.botao {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid transparent;
+}
+.estrangeiros {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 54px;
+
+}
+
+.educacao-sustentavel{
+  margin-top: 100px;
+}
+
+.textoefoto {
+  display: flex;
+  flex-direction: column;
+  width: 480px;
+  text-align: justify;
+}
+.botao-primario {
+  background: var(--terracota);
+  color: var(--branco);
+}
+
+.botao-secundario {
+  background: transparent;
+  color: var(--verde-folha);
+  border-color: var(--verde-folha);
+}
+
+.botao-secundario:hover {
+  background: var(--verde-folha);
+  color: var(--branco);
+}
+
+.texto1 {
+  text-align: start;
+  width: 400px;
+  font-weight: 500;
+}
+
+#missao {
+  background: #0355A1;
+  height: 500px;
+  color: white;
+}
+
+.incluswao {
+  font-size: 30px;
+}
+
+.missao-visao {
+  margin-top: 20px;
+  font-weight: 500px;
+  width: auto;
+}
+
+.hero {
+  margin-top: 80px;
+  margin-bottom: 100px;
+  padding: 100px;
+  height: 500px;
+}
+
+.educacao-inclusao {
+  background: var(--bege);
+}
+
+.educacao-intro {
+  color: var(--texto-claro);
+}
+
+.educacao-container {
+  width: 0%;
+  max-width: 1200px;
+  min-width: 300px;
+  height: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.educacao-grid {
+ 
+  display: flex;
+  flex-wrap: wrap;
+  gap:14px;
+  margin-top: 40px;
+  width: 1100px;
+  align-items: center;
+  margin:  auto;
+}
+
+.valor {
+  margin-top: 30px;
+  flex: 1 1 120px;
+  background: var(--branco);
+  padding: 15px;
+  width:10px;
+  border-radius: 8px;
+
+  align-items: center;
+  text-align: center;
+  border-top: 4px solid var(--verde-folha);
+}
+
+.valor:nth-child(2) { border-top-color: var(--terracota); }
+.valor:nth-child(3) { border-top-color: var(--azul-ceu); }
+.valor:nth-child(4) { border-top-color: var(--amarelo-sol); }
+
+
+.valor h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.valor p {
+  color: var(--texto-claro);
+  font-size: 0.95rem;
+}
+
+
+footer {
+  background: var(--texto);
+  color: var(--bege);
+  padding: 50px 0 20px;
+}
+
+.footer-colunas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #4a463d;
+}
+
+.footer-colunas > div {
+  flex: 1 1 200px;
+}
+
+footer h4 {
+  color: var(--branco);
+  margin-bottom: 12px;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer li {
+  margin-bottom: 8px;
+}
+
+footer a {
+  color: var(--bege);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--amarelo-sol);
+}
+
+.footer-copyright {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 0.85rem;
+  color: #b3ac9c;
+}
+
+/* Responsividade (original) */
+@media (max-width: 700px) {
+  header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  section {
+    padding: 40px 0;
+  }
+}
+
+/* responsivdade do menu */
+.menu-toggle {
+  display: none;
+  background: var(--verde-folha);
+  color: var(--branco);
+  border: 0;
+  border-radius: 4px;
+  padding: 10px 16px;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.menu-toggle:focus-visible,
+header nav a:focus-visible {
+  outline: 3px solid var(--amarelo-sol);
+  outline-offset: 2px;
+}
+
+@media (max-width: 1000px) {
+  header { position: sticky; top: 0; z-index: 10; }
+
+  header .container {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .menu-toggle { display: block; }
+
+  header nav { display: none; width: 100%; }
+  header nav.aberto { display: block; }
+
+  header nav ul { flex-direction: column; gap: 0; }
+  header nav a {
+    display: block;
+    padding: 12px 0;
+    border-top: 1px solid #e5ddd0;
+  }
+}
+
+/* responsividade */
+.botoes { display: flex; flex-wrap: wrap; gap: 12px; }
+
+.texto1 { width: 100%; max-width: 400px; }
+
+.sustentabilidade-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+
+}
+
+.desafios-educacao {
+  margin-top: 100px;
+  text-align: center;
+}
+.missao-visao,
+
+.desafios-grid,
+.projetos-grid {
+ 
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-top: 50px;
+}
+
+.card1, .desafio, .projeto {
+  background: var(--branco);
+  padding: 24px;
+  border-radius: 8px;
+  border-top: 4px solid var(--verde-folha);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .12);
+}
+
+.card1 p, .desafio p, .projeto p { color: var(--texto-claro); }
+
+@media (max-width: 900px) {
+  #missao, .hero { height: auto; }
+  .hero { padding: 60px 20px; }
+}
+
+@media (max-width: 700px) {
+  .hero { padding: 40px 20px; }
+  .botao { width: 100%; text-align: center; }
+  .footer-colunas { gap: 24px; }
+}
+
+
+.hero { height: auto; padding: 60px 0; }
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.foto { margin: 0; }
+
+.foto img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.foto figcaption {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: var(--texto-claro);
+}
+
+.com-foto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.com-foto.inverso .foto { order: -1; }
+
+.projeto img {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
+.com-foto .foto img,
+.hero-foto img {
+  aspect-ratio: 3 / 2;
+}
+
+
+@media (max-width: 600px) {
+  .hero-grid,
+  .com-foto { grid-template-columns: 1fr; }
+  .com-foto.inverso .foto { order: 0; }
+  .hero-foto { order: -1; }
+}
+
+
+.saiba-mais { margin-top: 28px; }
+
+#missao .botao-secundario {
+  color: var(--branco);
+  border-color: var(--branco);
+}
+#missao .botao-secundario:hover {
+  background: var(--branco);
+  color: var(--azul-ceu);
+}
+
+.botao:focus-visible {
+  outline: 3px solid var(--amarelo-sol);
+  outline-offset: 2px;
+}
+
+
+footer .botao-secundario {
+  color: var(--bege);
+  border-color: var(--bege);
+}
+footer .botao-secundario:hover {
+  background: var(--amarelo-sol);
+  border-color: var(--amarelo-sol);
+  color: var(--texto);
+}
+
+
+@media (min-width: 1001px) {
+  header .container {
+    max-width: 1500px;
+    flex-wrap: nowrap;
+    gap: 16px;
+  }
+
+  header .logo { flex-shrink: 0; }
+
+  header nav ul {
+    flex-wrap: nowrap;
+    gap: clamp(8px, 1vw, 18px);
+  }
+
+  header nav a {
+    font-size: clamp(10px, 1vw, 14.5px);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+}
+
+
+.footer-colunas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  text-align: center;
+}
+
+footer h4 { margin-top: 0; }
+
+@media (max-width: 700px) {
+  .footer-colunas {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+
+#missao {
+  background: linear-gradient(135deg, #0355A1 0%, #145AC4 100%);
+  height: auto;
+  padding: 80px 0;
+}
+
+#missao .quem-somos {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 0;
+}
+
+#missao .quem-somos::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  margin: 12px auto 0;
+
+  border-radius: 2px;
+}
+
+#missao .missao-visao {
+  margin-top: 40px;
+  counter-reset: card;
+}
+
+#missao .missao-visao > div {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 28px 24px;
+  
+}
+
+
+#missao .saiba-mais {
+  text-align: center;
+  margin-top: 40px;
+}
+
+
+.cta {
+  background: var(--verde-folha);
+  color: var(--branco);
+  text-align: center;
+}
+
+.cta .container { max-width: 800px; }
+
+.cta h2 { font-size: 2rem; }
+
+.cta p {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.cta .botao-secundario {
+  color: var(--branco);
+  border-color: var(--branco);
+}
+
+.cta .botao-secundario:hover {
+  background: var(--branco);
+  color: var(--verde-folha);
+}
+
+
+/* ===== Subpáginas ===== */
+
+/* Hero das subpáginas */
+.page-hero {
+  background: linear-gradient(135deg, var(--verde-folha) 0%, #2d5f35 100%);
+  color: var(--branco);
+  padding: 90px 0;
+  text-align: center;
+  margin-top: 0;
+}
+
+.page-hero h1 {
+  font-size: 2.4rem;
+  margin-bottom: 14px;
+}
+
+.page-hero p {
+  max-width: 680px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+/* Intro de seção */
+.section-intro {
+  max-width: 720px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+/* Cartão genérico reaproveitável com variação de cor */
+.cartao-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.cartao-grid .cartao {
+  background: var(--branco);
+  padding: 24px;
+  border-radius: 8px;
+  border-top: 4px solid var(--verde-folha);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .12);
+}
+
+.cartao-grid .cartao:nth-child(2) { border-top-color: var(--terracota); }
+.cartao-grid .cartao:nth-child(3) { border-top-color: var(--azul-ceu); }
+.cartao-grid .cartao:nth-child(4) { border-top-color: var(--amarelo-sol); }
+
+.cartao-grid .cartao p { color: var(--texto-claro); }
+
+/* Formulário de contato */
+.form-contato {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.form-contato .campo { margin-bottom: 20px; }
+
+.form-contato label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.form-contato input,
+.form-contato textarea,
+.form-contato select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 2px solid #ddd5c7;
+  border-radius: 6px;
+  font: inherit;
+  font-size: 1rem;
+  background: var(--branco);
+}
+
+.form-contato input:focus-visible,
+.form-contato textarea:focus-visible,
+.form-contato select:focus-visible {
+  outline: 3px solid var(--amarelo-sol);
+  border-color: var(--verde-folha);
+  outline-offset: 1px;
+}
+
+.form-contato textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.form-contato .campo-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.form-contato .campo-check input {
+  width: auto;
+  margin-top: 4px;
+}
+
+.form-contato button {
+  background: var(--terracota);
+  color: var(--branco);
+  border: 0;
+  padding: 14px 36px;
+  border-radius: 6px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.form-contato button:hover { background: #b36a3a; }
+
+.form-contato button:focus-visible {
+  outline: 3px solid var(--amarelo-sol);
+  outline-offset: 2px;
+}
+
+/* Container de vídeo responsivo (16:9) */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-top: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .15);
+}
+
+.video-container iframe,
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Áudio */
+.audio-section audio {
+  width: 100%;
+  margin-top: 16px;
+}
+
+/* Lista de referências */
+.lista-referencias {
+  list-style: none;
+  padding: 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.lista-referencias li {
+  padding: 16px 0;
+  border-bottom: 1px solid #e5ddd0;
+}
+
+.lista-referencias li:last-child { border-bottom: 0; }
+
+.lista-referencias a { word-break: break-word; }
+
+/* Grid de contato (info + formulário) */
+.contato-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.contato-info p { margin-bottom: 10px; }
+
+/* Mapa */
+.mapa-container {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .12);
+  margin-top: 16px;
+}
+
+.mapa-container iframe {
+  display: block;
+  width: 100%;
+  height: 300px;
+  border: 0;
+}
+
+/* Links de retorno */
+.voltar {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Responsividade */
+@media (max-width: 700px) {
+  .contato-grid { grid-template-columns: 1fr; }
+  .page-hero h1 { font-size: 1.8rem; }
+  .page-hero { padding: 60px 0; }
+}
+
+</style>
+<meta name="description" content="Referências utilizadas no projeto Raízes, formulário de contato e dados para falar com a equipe.">
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <a href="index.html" class="logo">Raízes</a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav id="menu" aria-label="Menu principal">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="imigrantes.html">Imigrantes</a></li>
+        <li><a href="educacao.html">Educação</a></li>
+        <li><a href="desafios.html">Desafios</a></li>
+        <li><a href="sustentabilidade.html">Sustentabilidade</a></li>
+        <li><a href="edu_sustentável.html">Edu. Sustentável</a></li>
+        <li><a href="projetos_iniciativas.html">Projetos</a></li>
+        <li><a href="ajudar.html">Ajudar</a></li>
+        <li><a href="fontes.html" aria-current="page">Fontes</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <h1>Fontes e Contato</h1>
+      <p>Aqui você encontra as referências utilizadas na construção do projeto Raízes e um formulário para falar diretamente com a equipe. Toda informação sobre direitos de estudantes estrangeiros foi conferida em fontes oficiais.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-intro">
+        <h2>Referências utilizadas</h2>
+        <p>As fontes abaixo foram consultadas para embasar os conteúdos deste site. Priorizamos fontes oficiais e organizações reconhecidas que atuam com refugiados, migrantes e educação.</p>
+      </div>
+      <ul class="lista-referencias">
+        <li>ACNUR Brasil — Educação. <a href="https://help.unhcr.org/brazil/educacao/" target="_blank" rel="noopener">help.unhcr.org/brazil/educacao</a></li>
+        <li>ACNUR — 5,8 milhões de crianças refugiadas sem acesso à educação. <a href="https://www.acnur.org/br/noticias/comunicados-imprensa/relatorio-educacao-2026" target="_blank" rel="noopener">acnur.org/br/noticias/relatorio-educacao-2026</a></li>
+        <li>ACNUR e UNESCO — Guia para promover a inclusão de pessoas refugiadas e migrantes em escolas. <a href="https://www.acnur.org/br/noticias/notas-informativas/acnur-e-unesco-lancam-guia-para-promover-inclusao-de-pessoas-refugiadas" target="_blank" rel="noopener">acnur.org/br/noticias/acnur-e-unesco-guia</a></li>
+        <li>ACNUR — Série de vídeos Cidades Solidárias. <a href="https://www.acnur.org/br/noticias/comunicados-imprensa/acnur-lanca-serie-de-videos-para-construcao-de-politicas-publicas" target="_blank" rel="noopener">acnur.org/br/noticias/cidades-solidarias</a></li>
+        <li>ACNUR Brasil — Informações para refugiados e solicitantes. <a href="https://help.unhcr.org/brazil/" target="_blank" rel="noopener">help.unhcr.org/brazil</a></li>
+        <li>OIM, UNICEF e Prefeitura de São Paulo — Ensino a distância para crianças refugiadas e migrantes. <a href="https://data.unhcr.org/en/news/22427" target="_blank" rel="noopener">data.unhcr.org/en/news/22427</a></li>
+        <li>ACNUR e Governo Federal — Portal de educação sobre crianças refugiadas. <a href="https://brasil.un.org/pt-br/152024-acnur-e-governo-federal-lancam-portal-de-educacao-sobre-criancas-refugiadas" target="_blank" rel="noopener">brasil.un.org — portal de educação</a></li>
+        <li>UNHCR — A educação melhora a integração de refugiados no Nordeste do Brasil. <a href="https://www.unhcr.org/fr/actualites/stories/leducation-ameliore-lintegration-des-refugies-au-nord-est-du-bresil" target="_blank" rel="noopener">unhcr.org — integração de refugiados</a></li>
+        <li>Canal do YouTube do ACNUR Brasil. <a href="https://www.youtube.com/@acnur-brasil" target="_blank" rel="noopener">youtube.com/@acnur-brasil</a></li>
+        <li>Foto: Folha de S.Paulo; Foto: Planeta Campo; Foto: SEMEC/Prefeitura de Belém; Foto: CONSED; Direitos autorais: © UNHCR/Allana Ferreira. Imagens utilizadas com fins educativos.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="educacao-inclusao">
+    <div class="container">
+      <div class="section-intro">
+        <h2>Fale conosco</h2>
+        <p>Tem dúvidas, sugestões ou quer colaborar com o projeto? Preencha o formulário abaixo. Os dados de contato do site são fictícios, criados para fins educativos.</p>
+      </div>
+
+      <div class="contato-grid">
+        <div class="contato-info">
+          <h3>Equipe Raízes</h3>
+          <p><strong>E-mail:</strong> contato@raizes.org.br</p>
+          <p><strong>Telefone:</strong> (11) 4002-8922</p>
+          <p><strong>Endereço:</strong> Av. Paulista, 1000 — São Paulo, SP</p>
+          <p>Integrantes: Julia Ayomide, Guilherme Alves, Gabriel Chaves, Gustavo Cruz e Kauan de Lima Freitas.</p>
+          <p>Disciplina: Front-End para Web (Atividade A2 — Entrega 01). Orientação: Prof. Paulo Fratta. UNICID, 2026.</p>
+
+          <div class="mapa-container">
+            <iframe
+              title="Mapa mostrando a localização da Av. Paulista em São Paulo"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=-46.66%2C-23.57%2C-46.63%2C-23.55&layer=mapnik&marker=-23.5614%2C-46.6565"
+              loading="lazy"></iframe>
+          </div>
+          <p style="margin-top: 8px; font-size: 0.85rem; color: var(--texto-claro);">Mapa: OpenStreetMap (dados fictícios para fins educativos)</p>
+        </div>
+
+        <form class="form-contato" novalidate>
+          <div class="campo">
+            <label for="nome">Nome completo *</label>
+            <input type="text" id="nome" name="nome" required
+                   minlength="2" maxlength="80"
+                   autocomplete="name"
+                   placeholder="Digite seu nome">
+          </div>
+
+          <div class="campo">
+            <label for="email">E-mail *</label>
+            <input type="email" id="email" name="email" required
+                   autocomplete="email"
+                   placeholder="exemplo@email.com">
+          </div>
+
+          <div class="campo">
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" name="telefone"
+                   pattern="^[\d\s\(\)\-]{8,20}$"
+                   autocomplete="tel"
+                   placeholder="(11) 90000-0000">
+          </div>
+
+          <div class="campo">
+            <label for="assunto">Assunto *</label>
+            <select id="assunto" name="assunto" required>
+              <option value="" selected disabled>Escolha um assunto</option>
+              <option value="voluntariado">Quero ser voluntário(a)</option>
+              <option value="doacao">Quero fazer uma doação</option>
+              <option value="parceria">Parceria institucional</option>
+              <option value="duvida">Dúvida sobre o projeto</option>
+              <option value="outro">Outro assunto</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="mensagem">Mensagem *</label>
+            <textarea id="mensagem" name="mensagem" required
+                      minlength="10" maxlength="500"
+                      placeholder="Escreva sua mensagem (mínimo 10 caracteres)"></textarea>
+          </div>
+
+          <div class="campo campo-check">
+            <input type="checkbox" id="consentimento" name="consentimento" required>
+            <label for="consentimento">Concordo em receber retorno da equipe Raízes pelo e-mail informado. *</label>
+          </div>
+
+          <button type="submit">Enviar mensagem</button>
+        </form>
+      </div>
+
+      <p id="form-status" role="status" aria-live="polite" style="text-align: center; margin-top: 20px; font-weight: 600; color: var(--verde-folha); display: none;"></p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="voltar">
+        <a href="index.html" class="botao botao-secundario" aria-label="Voltar para a página inicial">← Voltar para o início</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-colunas">
+      <div>
+        <h4>Projetos</h4>
+        <ul>
+          <li><a href="sobre.html">Quem somos</a></li>
+          <li><a href="projetos_iniciativas.html">Aluno parceiro</a></li>
+          <li><a href="projetos_iniciativas.html">Kit de acolhimento</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Aprenda</h4>
+        <ul>
+          <li><a href="imigrantes.html">Imigrantes e estrangeiros</a></li>
+          <li><a href="edu_sustentável.html">Educação sustentável</a></li>
+          <li><a href="sustentabilidade.html">Sustentabilidade</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Participe</h4>
+        <ul>
+          <li><a href="projetos_iniciativas.html">Projetos e iniciativas</a></li>
+          <li><a href="ajudar.html">Como ajudar</a></li>
+          <li><a href="fontes.html">Fontes e contatos</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-copyright">© 2026 Raízes. Um só solo, muitas raízes. Inclusão de imigrantes e estrangeiros no Brasil.</p>
+  </div>
+</footer>
+
+<script>
+  // Menu responsivo
+  const btn = document.querySelector('.menu-toggle');
+  const menu = document.getElementById('menu');
+
+  function fecharMenu() {
+    menu.classList.remove('aberto');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.textContent = 'Menu';
+  }
+
+  btn.addEventListener('click', () => {
+    const aberto = menu.classList.toggle('aberto');
+    btn.setAttribute('aria-expanded', aberto);
+    btn.textContent = aberto ? 'Fechar' : 'Menu';
+  });
+
+  menu.querySelectorAll('a').forEach(link => link.addEventListener('click', fecharMenu));
+
+  // Validação do formulário de contato
+  const form = document.querySelector('.form-contato');
+  const status = document.getElementById('form-status');
+
+  form.addEventListener('submit', function (evento) {
+    evento.preventDefault();
+
+    if (form.checkValidity()) {
+      status.textContent = 'Mensagem enviada com sucesso! Agradecemos o contato.';
+      status.style.display = 'block';
+      form.reset();
+    } else {
+      status.textContent = 'Por favor, preencha todos os campos obrigatórios corretamente.';
+      status.style.color = '#b33a3a';
+      status.style.display = 'block';
+      form.reportValidity();
+    }
+  });
+</script>
+
+</body>
+</html>

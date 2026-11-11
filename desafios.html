@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Desafios da Educação — Raízes</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --verde-folha: #3A7D44;
+  --terracota: #C97B4A;
+  --azul-ceu: #0355a1;
+  --amarelo-sol: #F2C14E;
+  --bege: #F4EBDD;
+  --branco: #FFFFFF;
+  --texto: #2C2A25;
+  --texto-claro: #6B655A;
+
+  --fonte: "Montserrat", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fonte);
+  color: var(--texto);
+  line-height: 1.6;
+  background: var(--branco);
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: var(--verde-folha);
+}
+
+h1, h2, h3 {
+  line-height: 1.25;
+  margin-top: 0;
+}
+
+.container1 {
+  align-items: start;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  padding: 60px 0;
+}
+
+/* Cabeçalho */
+header {
+  background: var(--branco);
+  border-bottom: 1px solid #e5ddd0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.sustentabilidade {
+ margin-top: 100px;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--verde-folha);
+  text-decoration: none;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+header nav a {
+  text-decoration: none;
+  color: var(--texto);
+  font-weight: bold;
+}
+
+header nav a:hover {
+  color: var(--terracota);
+}
+
+.botao {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid transparent;
+}
+.estrangeiros {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 54px;
+
+}
+
+.educacao-sustentavel{
+  margin-top: 100px;
+}
+
+.textoefoto {
+  display: flex;
+  flex-direction: column;
+  width: 480px;
+  text-align: justify;
+}
+.botao-primario {
+  background: var(--terracota);
+  color: var(--branco);
+}
+
+.botao-secundario {
+  background: transparent;
+  color: var(--verde-folha);
+  border-color: var(--verde-folha);
+}
+
+.botao-secundario:hover {
+  background: var(--verde-folha);
+  color: var(--branco);
+}
+
+.texto1 {
+  text-align: start;
+  width: 400px;
+  font-weight: 500;
+}
+
+#missao {
+  background: #0355A1;
+  height: 500px;
+  color: white;
+}
+
+.incluswao {
+  font-size: 30px;
+}
+
+.missao-visao {
+  margin-top: 20px;
+  font-weight: 500px;
+  width: auto;
+}
+
+.hero {
+  margin-top: 80px;
+  margin-bottom: 100px;
+  padding: 100px;
+  height: 500px;
+}
+
+.educacao-inclusao {
+  background: var(--bege);
+}
+
+.educacao-intro {
+  color: var(--texto-claro);
+}
+
+.educacao-container {
+  width: 0%;
+  max-width: 1200px;
+  min-width: 300px;
+  height: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.educacao-grid {
+ 
+  display: flex;
+  flex-wrap: wrap;
+  gap:14px;
+  margin-top: 40px;
+  width: 1100px;
+  align-items: center;
+  margin:  auto;
+}
+
+.valor {
+  margin-top: 30px;
+  flex: 1 1 120px;
+  background: var(--branco);
+  padding: 15px;
+  width:10px;
+  border-radius: 8px;
+
+  align-items: center;
+  text-align: center;
+  border-top: 4px solid var(--verde-folha);
+}
+
+.valor:nth-child(2) { border-top-color: var(--terracota); }
+.valor:nth-child(3) { border-top-color: var(--azul-ceu); }
+.valor:nth-child(4) { border-top-color: var(--amarelo-sol); }
+
+
+.valor h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.valor p {
+  color: var(--texto-claro);
+  font-size: 0.95rem;
+}
+
+
+footer {
+  background: var(--texto);
+  color: var(--bege);
+  padding: 50px 0 20px;
+}
+
+.footer-colunas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #4a463d;
+}
+
+.footer-colunas > div {
+  flex: 1 1 200px;
+}
+
+footer h4 {
+  color: var(--branco);
+  margin-bottom: 12px;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer li {
+  margin-bottom: 8px;
+}
+
+footer a {
+  color: var(--bege);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--amarelo-sol);
+}
+
+.footer-copyright {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 0.85rem;
+  color: #b3ac9c;
+}
+
+/* Responsividade (original) */
+@media (max-width: 700px) {
+  header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  section {
+    padding: 40px 0;
+  }
+}
+
+/* responsivdade do menu */
+.menu-toggle {
+  display: none;
+  background: var(--verde-folha);
+  color: var(--branco);
+  border: 0;
+  border-radius: 4px;
+  padding: 10px 16px;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.menu-toggle:focus-visible,
+header nav a:focus-visible {
+  outline: 3px solid var(--amarelo-sol);
+  outline-offset: 2px;
+}
+
+@media (max-width: 1000px) {
+  header { position: sticky; top: 0; z-index: 10; }
+
+  header .container {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .menu-toggle { display: block; }
+
+  header nav { display: none; width: 100%; }
+  header nav.aberto { display: block; }
+
+  header nav ul { flex-direction: column; gap: 0; }
+  header nav a {
+    display: block;
+    padding: 12px 0;
+    border-top: 1px solid #e5ddd0;
+  }
+}
+
+/* responsividade */
+.botoes { display: flex; flex-wrap: wrap; gap: 12px; }
+
+.texto1 { width: 100%; max-width: 400px; }
+
+.sustentabilidade-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+
+}
+
+.desafios-educacao {
+  margin-top: 100px;
+  text-align: center;
+}
+.missao-visao,
+
+.desafios-grid,
+.projetos-grid {
+ 
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-top: 50px;
+}
+
+.card1, .desafio, .projeto {
+  background: var(--branco);
+  padding: 24px;
+  border-radius: 8px;
+  border-top: 4px solid var(--verde-folha);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .12);
+}
+
+.card1 p, .desafio p, .projeto p { color: var(--texto-claro); }
+
+@media (max-width: 900px) {
+  #missao, .hero { height: auto; }
+  .hero { padding: 60px 20px; }
+}
+
+@media (max-width: 700px) {
+  .hero { padding: 40px 20px; }
+  .botao { width: 100%; text-align: center; }
+  .footer-colunas { gap: 24px; }
+}
+
+
+.hero { height: auto; padding: 60px 0; }
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.foto { margin: 0; }
+
+.foto img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.foto figcaption {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: var(--texto-claro);
+}
+
+.com-foto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.com-foto.inverso .foto { order: -1; }
+
+.projeto img {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
+.com-foto .foto img,
+.hero-foto img {
+  aspect-ratio: 3 / 2;
+}
+
+
+@media (max-width: 600px) {
+  .hero-grid,
+  .com-foto { grid-template-columns: 1fr; }
+  .com-foto.inverso .foto { order: 0; }
+  .hero-foto { order: -1; }
+}
+
+
+.saiba-mais { margin-top: 28px; }
+
+#missao .botao-secundario {
+  color: var(--branco);
+  border-color: var(--branco);
+}
+#missao .botao-secundario:hover {
+  background: var(--branco);
+  color: var(--azul-ceu);
+}
+
+.botao:focus-visible {
+  outline: 3px solid var(--amarelo-sol);
+  outline-offset: 2px;
+}
+
+
+footer .botao-secundario {
+  color: var(--bege);
+  border-color: var(--bege);
+}
+footer .botao-secundario:hover {
+  background: var(--amarelo-sol);
+  border-color: var(--amarelo-sol);
+  color: var(--texto);
+}
+
+
+@media (min-width: 1001px) {
+  header .container {
+    max-width: 1500px;
+    flex-wrap: nowrap;
+    gap: 16px;
+  }
+
+  header .logo { flex-shrink: 0; }
+
+  header nav ul {
+    flex-wrap: nowrap;
+    gap: clamp(8px, 1vw, 18px);
+  }
+
+  header nav a {
+    font-size: clamp(10px, 1vw, 14.5px);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+}
+
+
+.footer-colunas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  text-align: center;
+}
+
+footer h4 { margin-top: 0; }
+
+@media (max-width: 700px) {
+  .footer-colunas {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+
+#missao {
+  background: linear-gradient(135deg, #0355A1 0%, #145AC4 100%);
+  height: auto;
+  padding: 80px 0;
+}
+
+#missao .quem-somos {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 0;
+}
+
+#missao .quem-somos::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  margin: 12px auto 0;
+
+  border-radius: 2px;
+}
+
+#missao .missao-visao {
+  margin-top: 40px;
+  counter-reset: card;
+}
+
+#missao .missao-visao > div {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 28px 24px;
+  
+}
+
+
+#missao .saiba-mais {
+  text-align: center;
+  margin-top: 40px;
+}
+
+
+.cta {
+  background: var(--verde-folha);
+  color: var(--branco);
+  text-align: center;
+}
+
+.cta .container { max-width: 800px; }
+
+.cta h2 { font-size: 2rem; }
+
+.cta p {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.cta .botao-secundario {
+  color: var(--branco);
+  border-color: var(--branco);
+}
+
+.cta .botao-secundario:hover {
+  background: var(--branco);
+  color: var(--verde-folha);
+}
+
+
+/* ===== Subpáginas ===== */
+
+/* Hero das subpáginas */
+.page-hero {
+  background: linear-gradient(135deg, var(--verde-folha) 0%, #2d5f35 100%);
+  color: var(--branco);
+  padding: 90px 0;
+  text-align: center;
+  margin-top: 0;
+}
+
+.page-hero h1 {
+  font-size: 2.4rem;
+  margin-bottom: 14px;
+}
+
+.page-hero p {
+  max-width: 680px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+/* Intro de seção */
+.section-intro {
+  max-width: 720px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+/* Cartão genérico reaproveitável com variação de cor */
+.cartao-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.cartao-grid .cartao {
+  background: var(--branco);
+  padding: 24px;
+  border-radius: 8px;
+  border-top: 4px solid var(--verde-folha);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .12);
+}
+
+.cartao-grid .cartao:nth-child(2) { border-top-color: var(--terracota); }
+.cartao-grid .cartao:nth-child(3) { border-top-color: var(--azul-ceu); }
+.cartao-grid .cartao:nth-child(4) { border-top-color: var(--amarelo-sol); }
+
+.cartao-grid .cartao p { color: var(--texto-claro); }
+
+/* Formulário de contato */
+.form-contato {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.form-contato .campo { margin-bottom: 20px; }
+
+.form-contato label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.form-contato input,
+.form-contato textarea,
+.form-contato select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 2px solid #ddd5c7;
+  border-radius: 6px;
+  font: inherit;
+  font-size: 1rem;
+  background: var(--branco);
+}
+
+.form-contato input:focus-visible,
+.form-contato textarea:focus-visible,
+.form-contato select:focus-visible {
+  outline: 3px solid var(--amarelo-sol);
+  border-color: var(--verde-folha);
+  outline-offset: 1px;
+}
+
+.form-contato textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.form-contato .campo-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.form-contato .campo-check input {
+  width: auto;
+  margin-top: 4px;
+}
+
+.form-contato button {
+  background: var(--terracota);
+  color: var(--branco);
+  border: 0;
+  padding: 14px 36px;
+  border-radius: 6px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.form-contato button:hover { background: #b36a3a; }
+
+.form-contato button:focus-visible {
+  outline: 3px solid var(--amarelo-sol);
+  outline-offset: 2px;
+}
+
+/* Container de vídeo responsivo (16:9) */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-top: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .15);
+}
+
+.video-container iframe,
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Áudio */
+.audio-section audio {
+  width: 100%;
+  margin-top: 16px;
+}
+
+/* Lista de referências */
+.lista-referencias {
+  list-style: none;
+  padding: 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.lista-referencias li {
+  padding: 16px 0;
+  border-bottom: 1px solid #e5ddd0;
+}
+
+.lista-referencias li:last-child { border-bottom: 0; }
+
+.lista-referencias a { word-break: break-word; }
+
+/* Grid de contato (info + formulário) */
+.contato-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.contato-info p { margin-bottom: 10px; }
+
+/* Mapa */
+.mapa-container {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .12);
+  margin-top: 16px;
+}
+
+.mapa-container iframe {
+  display: block;
+  width: 100%;
+  height: 300px;
+  border: 0;
+}
+
+/* Links de retorno */
+.voltar {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Responsividade */
+@media (max-width: 700px) {
+  .contato-grid { grid-template-columns: 1fr; }
+  .page-hero h1 { font-size: 1.8rem; }
+  .page-hero { padding: 60px 0; }
+}
+
+</style>
+<meta name="description" content="Os desafios enfrentados por alunos imigrantes e estrangeiros na educação brasileira: barreiras de idioma, acesso, documentação e preconceito.">
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <a href="index.html" class="logo">Raízes</a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav id="menu" aria-label="Menu principal">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="imigrantes.html">Imigrantes</a></li>
+        <li><a href="educacao.html">Educação</a></li>
+        <li><a href="desafios.html" aria-current="page">Desafios</a></li>
+        <li><a href="sustentabilidade.html">Sustentabilidade</a></li>
+        <li><a href="edu_sustentável.html">Edu. Sustentável</a></li>
+        <li><a href="projetos_iniciativas.html">Projetos</a></li>
+        <li><a href="ajudar.html">Ajudar</a></li>
+        <li><a href="fontes.html">Fontes</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <h1>Desafios da Educação</h1>
+      <p>Apesar de ser um direito garantido pela Constituição, a educação enfrenta barreiras que dificultam o acesso e a permanência de imigrantes e estrangeiros nas escolas brasileiras. Conhecer esses desafios é o primeiro passo para superá-los.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="com-foto">
+        <div>
+          <h2>Barreiras de idioma</h2>
+          <p>O idioma é uma das maiores barreiras para o aprendizado e a integração social. Sem dominar o português, o aluno estrangeiro tem dificuldade de acompanhar as aulas, participar das atividades e se comunicar com colegas e professores. Muitas vezes, a escola não conta com materiais bilíngues ou professores preparados para receber alunos que estão aprendendo o idioma.</p>
+          <p>Para reduzir essa barreira, é importante oferecer apoio linguístico, como aulas de português como língua adicional, materiais visuais e o programa Aluno Parceiro, que aproxima o recém-chegado de um colega que pode ajudá-lo no dia a dia. Pequenos gestos, como traduzir combinados de sala e explicar as rotinas, já fazem grande diferença na adaptação.</p>
+        </div>
+        <figure class="foto">
+          <img src="https://f.i.uol.com.br/fotografia/2026/05/05/177800802669fa3fdaaa3be_1778008026_3x2_rt.jpg"
+               alt="Famílias imigrantes carregando malas ao chegar a um novo país"
+               width="600" height="400" loading="lazy">
+          <figcaption>Foto: Folha de S.Paulo</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="educacao-inclusao">
+    <div class="container">
+      <div class="section-intro">
+        <h2>Acesso à educação</h2>
+        <p>O acesso à escola pode parecer simples, mas envolve uma série de etapas que nem sempre são claras para quem chega de outro país: encontrar uma vaga, entender o sistema de matrícula, conhecer os direitos do estudante e se locomover até a unidade escolar.</p>
+      </div>
+      <div class="educacao-grid">
+        <article class="valor">
+          <h3>Direito garantido</h3>
+          <p>A Constituição Federal e a Lei de Diretrizes e Bases da Educação garantem o acesso à escola pública a todas as crianças e adolescentes, independentemente de nacionalidade ou documentação.</p>
+        </article>
+        <article class="valor">
+          <h3>Matrícula simplificada</h3>
+          <p>A lei brasileira determina que procedimentos administrativos, como a matrícula escolar, devem ser facilitados para pessoas refugiadas e migrantes.</p>
+        </article>
+        <article class="valor">
+          <h3>Transporte e estrutura</h3>
+          <p>A distância entre a casa e a escola, a disponibilidade de transporte e a infraestrutura da unidade podem dificultar a frequência regular às aulas.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="com-foto inverso">
+        <div>
+          <h2>Documentação</h2>
+          <p>A ausência de documentos é um obstáculo frequente. Muitas famílias imigrantes chegam ao Brasil sem documentos escolares do país de origem, o que pode dificultar a matrícula e a definição da série adequada. Em alguns casos, há também a falta de documentos de identidade ou de regularização migratória.</p>
+          <p>É importante lembrar que a legislação brasileira prevê que crianças refugiadas e migrantes devem ser matriculadas na escola a qualquer tempo, mesmo sem a documentação completa. A escola pode acolher o aluno e orientar a família sobre como regularizar a situação aos poucos, sem impedir o acesso à educação.</p>
+        </div>
+        <figure class="foto">
+          <img src="https://horacampinas.com.br/wp-content/uploads/2021/05/micasa.jpg"
+               alt="Crianças imigrantes desenhando juntas em sala de aula"
+               width="600" height="400" loading="lazy">
+          <figcaption>Direitos autorais: © UNHCR/Allana Ferreira</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="educacao-inclusao">
+    <div class="container">
+      <div class="section-intro">
+        <h2>Preconceito e discriminação</h2>
+        <p>O preconceito pode se manifestar de muitas formas: em comentários, em isolamento no recreio, em expectativas reduzidas por parte de alguns educadores ou em estereótipos sobre países e culturas. Ele afeta a autoestima do aluno, sua vontade de participar e até seu desempenho escolar.</p>
+      </div>
+      <div class="educacao-grid">
+        <article class="valor">
+          <h3>Educação contra o preconceito</h3>
+          <p>Conhecer outras culturas e histórias ajuda a substituir o medo e o estereótipo pelo respeito, acolhimento e empatia, construindo uma sociedade mais inclusiva.</p>
+        </article>
+        <article class="valor">
+          <h3>Acolhimento ativo</h3>
+          <p>Professores e colegas podem promover a integração valorizando a língua e a cultura de origem do aluno, em vez de tratá-las como um problema a ser corrigido.</p>
+        </article>
+        <article class="valor">
+          <h3>Diálogo com as famílias</h3>
+          <p>Envolver as famílias na vida escolar, ouvindo suas necessidades e expectativas, fortalece o sentido de pertencimento e ajuda a combater a exclusão.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <h2>Quer ajudar a superar esses desafios?</h2>
+      <p>Existem muitas formas de contribuir: voluntariado, doações, educação e parcerias. Cada gesto aproxima um aluno imigrante de uma escola mais acolhedora.</p>
+      <div class="saiba-mais">
+        <a href="ajudar.html" class="botao botao-secundario" aria-label="Saiba como ajudar">Saiba como ajudar</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-colunas">
+      <div>
+        <h4>Projetos</h4>
+        <ul>
+          <li><a href="sobre.html">Quem somos</a></li>
+          <li><a href="projetos_iniciativas.html">Aluno parceiro</a></li>
+          <li><a href="projetos_iniciativas.html">Kit de acolhimento</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Aprenda</h4>
+        <ul>
+          <li><a href="imigrantes.html">Imigrantes e estrangeiros</a></li>
+          <li><a href="edu_sustentável.html">Educação sustentável</a></li>
+          <li><a href="sustentabilidade.html">Sustentabilidade</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Participe</h4>
+        <ul>
+          <li><a href="projetos_iniciativas.html">Projetos e iniciativas</a></li>
+          <li><a href="ajudar.html">Como ajudar</a></li>
+          <li><a href="fontes.html">Fontes e contatos</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-copyright">© 2026 Raízes. Um só solo, muitas raízes. Inclusão de imigrantes e estrangeiros no Brasil.</p>
+  </div>
+</footer>
+
+<script>
+  const btn = document.querySelector('.menu-toggle');
+  const menu = document.getElementById('menu');
+
+  function fecharMenu() {
+    menu.classList.remove('aberto');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.textContent = 'Menu';
+  }
+
+  btn.addEventListener('click', () => {
+    const aberto = menu.classList.toggle('aberto');
+    btn.setAttribute('aria-expanded', aberto);
+    btn.textContent = aberto ? 'Fechar' : 'Menu';
+  });
+
+  menu.querySelectorAll('a').forEach(link => link.addEventListener('click', fecharMenu));
+</script>
+
+</body>
+</html>
