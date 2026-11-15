@@ -181,11 +181,105 @@ header nav a:hover {
 }
 
 .educacao-inclusao {
-  background: var(--bege);
+  background: linear-gradient(135deg, #0355a1 0%, #0d65bf 100%);
 }
 
-.educacao-intro {
-  color: var(--texto-claro);
+.section-intro,
+.section-intro p,
+#form-status {
+  color: var(--branco);
+}
+
+.modal-sucesso {
+  position: fixed;
+  inset: 0;
+  background: rgba(19, 25, 35, 0.55);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.modal-sucesso.ativo {
+  display: flex;
+}
+
+.modal-conteudo {
+  background: var(--branco);
+  color: var(--texto);
+  width: min(420px, 100%);
+  border-radius: 16px;
+  padding: 28px 24px 22px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+}
+
+.modal-conteudo h3 {
+  margin-bottom: 12px;
+  color: var(--verde-folha);
+  font-size: 1.6rem;
+}
+
+.modal-conteudo p {
+  margin: 0 0 20px;
+  color: var(--texto);
+  font-weight: 500;
+}
+
+.modal-fechar {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  border: none;
+  background: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--texto);
+}
+
+.modal-fechar:hover {
+  color: var(--verde-folha);
+}
+
+.modal-botao {
+  background: var(--verde-folha);
+  color: var(--branco);
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.modal-botao:hover {
+  background: #2d6e3a;
+}
+
+.contato-grid {
+  background: var(--branco);
+  border-radius: 18px;
+  padding: 32px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  color: var(--texto);
+}
+
+.contato-info,
+.contato-info p,
+.contato-info h3,
+.form-contato label,
+.form-contato button,
+.form-contato input::placeholder,
+.form-contato textarea::placeholder {
+  color: var(--texto);
+}
+
+.form-contato label,
+.form-contato input,
+.form-contato textarea,
+.form-contato select {
+  color: var(--texto);
 }
 
 .educacao-container {
@@ -655,18 +749,19 @@ footer h4 { margin-top: 0; }
 .form-contato select {
   width: 100%;
   padding: 12px 14px;
-  border: 2px solid #ddd5c7;
+  border: 2px solid #d6d1c7;
   border-radius: 6px;
   font: inherit;
   font-size: 1rem;
-  background: var(--branco);
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--texto);
 }
 
 .form-contato input:focus-visible,
 .form-contato textarea:focus-visible,
 .form-contato select:focus-visible {
-  outline: 3px solid var(--amarelo-sol);
-  border-color: var(--verde-folha);
+  outline: 2px solid #000000;
+  border-color: #000000;
   outline-offset: 1px;
 }
 
@@ -687,9 +782,9 @@ footer h4 { margin-top: 0; }
 }
 
 .form-contato button {
-  background: var(--terracota);
-  color: var(--branco);
-  border: 0;
+  background: var(--branco);
+  color: var(--azul-ceu);
+  border: 2px solid #000000;
   padding: 14px 36px;
   border-radius: 6px;
   font: inherit;
@@ -697,7 +792,7 @@ footer h4 { margin-top: 0; }
   cursor: pointer;
 }
 
-.form-contato button:hover { background: #b36a3a; }
+.form-contato button:hover { background: #edf5ff; }
 
 .form-contato button:focus-visible {
   outline: 3px solid var(--amarelo-sol);
@@ -757,6 +852,10 @@ footer h4 { margin-top: 0; }
 }
 
 .contato-info p { margin-bottom: 10px; }
+
+.contato-info h3 {
+  color: var(--branco);
+}
 
 /* Mapa */
 .mapa-container {
@@ -853,17 +952,17 @@ footer h4 { margin-top: 0; }
           <h3>Equipe Raízes</h3>
           <p><strong>E-mail:</strong> contato@raizes.org.br</p>
           <p><strong>Telefone:</strong> (11) 4002-8922</p>
-          <p><strong>Endereço:</strong> Av. Paulista, 1000 — São Paulo, SP</p>
+          <p><strong>Endereço:</strong> Universidade Cidade de São Paulo (UNICID) — São Paulo, SP</p>
           <p>Integrantes: Julia Ayomide, Guilherme Alves, Gabriel Chaves, Gustavo Cruz e Kauan de Lima Freitas.</p>
           <p>Disciplina: Front-End para Web (Atividade A2 — Entrega 01). Orientação: Prof. Paulo Fratta. UNICID, 2026.</p>
 
           <div class="mapa-container">
             <iframe
-              title="Mapa mostrando a localização da Av. Paulista em São Paulo"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=-46.66%2C-23.57%2C-46.63%2C-23.55&layer=mapnik&marker=-23.5614%2C-46.6565"
+              title="Mapa mostrando a localização da UNICID em São Paulo"
+              src="https://www.google.com/maps?q=Universidade%20Cidade%20de%20S%C3%A3o%20Paulo%20UNICID&z=15&output=embed"
               loading="lazy"></iframe>
           </div>
-          <p style="margin-top: 8px; font-size: 0.85rem; color: var(--texto-claro);">Mapa: OpenStreetMap (dados fictícios para fins educativos)</p>
+          <p style="margin-top: 8px; font-size: 0.85rem; color: var(--azul-ceu);">Mapa: Google Maps (dados fictícios para fins educativos)</p>
         </div>
 
         <form class="form-contato" novalidate>
@@ -917,18 +1016,18 @@ footer h4 { margin-top: 0; }
           <button type="submit">Enviar mensagem</button>
         </form>
       </div>
-
-      <p id="form-status" role="status" aria-live="polite" style="text-align: center; margin-top: 20px; font-weight: 600; color: var(--verde-folha); display: none;"></p>
     </div>
   </section>
 
-  <section>
-    <div class="container">
-      <div class="voltar">
-        <a href="index.html" class="botao botao-secundario" aria-label="Voltar para a página inicial">← Voltar para o início</a>
-      </div>
+  <div id="modal-sucesso" class="modal-sucesso" aria-hidden="true">
+    <div class="modal-conteudo" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+      <button class="modal-fechar" type="button" aria-label="Fechar modal">×</button>
+      <h3 id="modal-titulo">Sucesso!</h3>
+      <p>Mensagem enviada com sucesso! Agradecemos o contato.</p>
+      <button type="button" class="modal-botao">OK</button>
     </div>
-  </section>
+  </div>
+
 </main>
 
 <footer>
@@ -984,19 +1083,30 @@ footer h4 { margin-top: 0; }
 
   // Validação do formulário de contato
   const form = document.querySelector('.form-contato');
-  const status = document.getElementById('form-status');
+  const modal = document.getElementById('modal-sucesso');
+  const fecharModal = document.querySelector('.modal-fechar');
+  const confirmarModal = document.querySelector('.modal-botao');
+
+  function abrirModal() {
+    modal.classList.add('ativo');
+    modal.setAttribute('aria-hidden', 'false');
+  }
+
+  function fecharModalSucesso() {
+    modal.classList.remove('ativo');
+    modal.setAttribute('aria-hidden', 'true');
+  }
+
+  fecharModal.addEventListener('click', fecharModalSucesso);
+  confirmarModal.addEventListener('click', fecharModalSucesso);
 
   form.addEventListener('submit', function (evento) {
     evento.preventDefault();
 
     if (form.checkValidity()) {
-      status.textContent = 'Mensagem enviada com sucesso! Agradecemos o contato.';
-      status.style.display = 'block';
+      abrirModal();
       form.reset();
     } else {
-      status.textContent = 'Por favor, preencha todos os campos obrigatórios corretamente.';
-      status.style.color = '#b33a3a';
-      status.style.display = 'block';
       form.reportValidity();
     }
   });
