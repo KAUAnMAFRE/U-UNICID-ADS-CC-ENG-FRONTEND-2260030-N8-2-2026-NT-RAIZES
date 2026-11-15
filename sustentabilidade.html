@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sustentabilidade — Raízes</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --verde-folha: #3A7D44;
+  --terracota: #C97B4A;
+  --azul-ceu: #0355a1;
+  --amarelo-sol: #F2C14E;
+  --bege: #F4EBDD;
+  --branco: #FFFFFF;
+  --texto: #2C2A25;
+  --texto-claro: #6B655A;
+
+  --fonte: "Montserrat", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fonte);
+  color: var(--texto);
+  line-height: 1.6;
+  background: var(--branco);
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: var(--verde-folha);
+}
+
+h1, h2, h3 {
+  line-height: 1.25;
+  margin-top: 0;
+}
+
+.container1 {
+  align-items: start;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  padding: 60px 0;
+}
+
+/* Cabeçalho */
+header {
+  background: var(--branco);
+  border-bottom: 1px solid #e5ddd0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.sustentabilidade {
+ margin-top: 100px;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--verde-folha);
+  text-decoration: none;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+header nav a {
+  text-decoration: none;
+  color: var(--texto);
+  font-weight: bold;
+}
+
+header nav a:hover {
+  color: var(--terracota);
+}
+
+.botao {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid transparent;
+}
+.estrangeiros {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 54px;
+
+}
+
+.educacao-sustentavel{
+  margin-top: 100px;
+}
+
+.textoefoto {
+  display: flex;
+  flex-direction: column;
+  width: 480px;
+  text-align: justify;
+}
+.botao-primario {
+  background: var(--terracota);
+  color: var(--branco);
+}
+
+.botao-secundario {
+  background: transparent;
+  color: var(--verde-folha);
+  border-color: var(--verde-folha);
+}
+
+.botao-secundario:hover {
+  background: var(--verde-folha);
+  color: var(--branco);
+}
+
+.texto1 {
+  text-align: start;
+  width: 400px;
+  font-weight: 500;
+}
+
+#missao {
+  background: #0355A1;
+  height: 500px;
+  color: white;
+}
+
+.incluswao {
+  font-size: 30px;
+}
+
+.missao-visao {
+  margin-top: 20px;
+  font-weight: 500px;
+  width: auto;
+}
+
+.hero {
+  margin-top: 80px;
+  margin-bottom: 100px;
+  padding: 100px;
+  height: 500px;
+}
+
+.educacao-inclusao {
+  background: var(--bege);
+}
+
+.educacao-intro {
+  color: var(--texto-claro);
+}
+
+.educacao-container {
+  width: 0%;
+  max-width: 1200px;
+  min-width: 300px;
+  height: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.educacao-grid {
+ 
+  display: flex;
+  flex-wrap: wrap;
+  gap:14px;
+  margin-top: 40px;
+  width: 1100px;
+  align-items: center;
+  margin:  auto;
+}
+
+.valor {
+  margin-top: 30px;
+  flex: 1 1 120px;
+  background: var(--branco);
+  padding: 15px;
+  width:10px;
+  border-radius: 8px;
+
+  align-items: center;
+  text-align: center;
+  border-top: 4px solid var(--verde-folha);
+}
+
+.valor:nth-child(2) { border-top-color: var(--terracota); }
+.valor:nth-child(3) { border-top-color: var(--azul-ceu); }
+.valor:nth-child(4) { border-top-color: var(--amarelo-sol); }
+
+
+.valor h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.valor p {
+  color: var(--texto-claro);
+  font-size: 0.95rem;
+}
+
+
+footer {
+  background: var(--texto);
+  color: var(--bege);
+  padding: 50px 0 20px;
+}
+
+.footer-colunas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #4a463d;
+}
+
+.footer-colunas > div {
+  flex: 1 1 200px;
+}
+
+footer h4 {
+  color: var(--branco);
+  margin-bottom: 12px;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer li {
+  margin-bottom: 8px;
+}
+
+footer a {
+  color: var(--bege);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--amarelo-sol);
+}
+
+.footer-copyright {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 0.85rem;
+  color: #b3ac9c;
+}
+
+/* Responsividade (original) */
+@media (max-width: 700px) {
+  header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  section {
+    padding: 40px 0;
+  }
+}
+
+/* responsivdade do menu */
+.menu-toggle {
+  display: none;
+  background: var(--verde-folha);
+  color: var(--branco);
+  border: 0;
+  border-radius: 4px;
+  padding: 10px 16px;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.menu-toggle:focus-visible,
+header nav a:focus-visible {
+  outline: 3px solid var(--amarelo-sol);
+  outline-offset: 2px;
+}
+
+@media (max-width: 1000px) {
+  header { position: sticky; top: 0; z-index: 10; }
+
+  header .container {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .menu-toggle { display: block; }
+
+  header nav { display: none; width: 100%; }
+  header nav.aberto { display: block; }
+
+  header nav ul { flex-direction: column; gap: 0; }
+  header nav a {
+    display: block;
+    padding: 12px 0;
+    border-top: 1px solid #e5ddd0;
+  }
+}
+
+/* responsividade */
+.botoes { display: flex; flex-wrap: wrap; gap: 12px; }
+
+.texto1 { width: 100%; max-width: 400px; }
+
+.sustentabilidade-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+
+}
+
+.desafios-educacao {
+  margin-top: 100px;
+  text-align: center;
+}
+.missao-visao,
+
+.desafios-grid,
+.projetos-grid {
+ 
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-top: 50px;
+}
+
+.card1, .desafio, .projeto {
+  background: var(--branco);
+  padding: 24px;
+  border-radius: 8px;
+  border-top: 4px solid var(--verde-folha);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .12);
+}
+
+.card1 p, .desafio p, .projeto p { color: var(--texto-claro); }
+
+@media (max-width: 900px) {
+  #missao, .hero { height: auto; }
+  .hero { padding: 60px 20px; }
+}
+
+@media (max-width: 700px) {
+  .hero { padding: 40px 20px; }
+  .botao { width: 100%; text-align: center; }
+  .footer-colunas { gap: 24px; }
+}
+
+
+.hero { height: auto; padding: 60px 0; }
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.foto { margin: 0; }
+
+.foto img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.foto figcaption {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: var(--texto-claro);
+}
+
+.com-foto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.com-foto.inverso .foto { order: -1; }
+
+.projeto img {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
+.com-foto .foto img,
+.hero-foto img {
+  aspect-ratio: 3 / 2;
+}
+
+
+@media (max-width: 600px) {
+  .hero-grid,
+  .com-foto { grid-template-columns: 1fr; }
+  .com-foto.inverso .foto { order: 0; }
+  .hero-foto { order: -1; }
+}
+
+
+.saiba-mais { margin-top: 28px; }
+
+#missao .botao-secundario {
+  color: var(--branco);
+  border-color: var(--branco);
+}
+#missao .botao-secundario:hover {
+  background: var(--branco);
+  color: var(--azul-ceu);
+}
+
+.botao:focus-visible {
+  outline: 3px solid var(--amarelo-sol);
+  outline-offset: 2px;
+}
+
+
+footer .botao-secundario {
+  color: var(--bege);
+  border-color: var(--bege);
+}
+footer .botao-secundario:hover {
+  background: var(--amarelo-sol);
+  border-color: var(--amarelo-sol);
+  color: var(--texto);
+}
+
+
+@media (min-width: 1001px) {
+  header .container {
+    max-width: 1500px;
+    flex-wrap: nowrap;
+    gap: 16px;
+  }
+
+  header .logo { flex-shrink: 0; }
+
+  header nav ul {
+    flex-wrap: nowrap;
+    gap: clamp(8px, 1vw, 18px);
+  }
+
+  header nav a {
+    font-size: clamp(10px, 1vw, 14.5px);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+}
+
+
+.footer-colunas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  text-align: center;
+}
+
+footer h4 { margin-top: 0; }
+
+@media (max-width: 700px) {
+  .footer-colunas {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+
+#missao {
+  background: linear-gradient(135deg, #0355A1 0%, #145AC4 100%);
+  height: auto;
+  padding: 80px 0;
+}
+
+#missao .quem-somos {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 0;
+}
+
+#missao .quem-somos::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  margin: 12px auto 0;
+
+  border-radius: 2px;
+}
+
+#missao .missao-visao {
+  margin-top: 40px;
+  counter-reset: card;
+}
+
+#missao .missao-visao > div {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 28px 24px;
+  
+}
+
+
+#missao .saiba-mais {
+  text-align: center;
+  margin-top: 40px;
+}
+
+
+.cta {
+  background: var(--verde-folha);
+  color: var(--branco);
+  text-align: center;
+}
+
+.cta .container { max-width: 800px; }
+
+.cta h2 { font-size: 2rem; }
+
+.cta p {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.cta .botao-secundario {
+  color: var(--branco);
+  border-color: var(--branco);
+}
+
+.cta .botao-secundario:hover {
+  background: var(--branco);
+  color: var(--verde-folha);
+}
+
+
+/* ===== Subpáginas ===== */
+
+/* Hero das subpáginas */
+.page-hero {
+  background: linear-gradient(135deg, var(--verde-folha) 0%, #2d5f35 100%);
+  color: var(--branco);
+  padding: 90px 0;
+  text-align: center;
+  margin-top: 0;
+}
+
+.page-hero h1 {
+  font-size: 2.4rem;
+  margin-bottom: 14px;
+}
+
+.page-hero p {
+  max-width: 680px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+/* Intro de seção */
+.section-intro {
+  max-width: 720px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+/* Cartão genérico reaproveitável com variação de cor */
+.cartao-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.cartao-grid .cartao {
+  background: var(--branco);
+  padding: 24px;
+  border-radius: 8px;
+  border-top: 4px solid var(--verde-folha);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .12);
+}
+
+.cartao-grid .cartao:nth-child(2) { border-top-color: var(--terracota); }
+.cartao-grid .cartao:nth-child(3) { border-top-color: var(--azul-ceu); }
+.cartao-grid .cartao:nth-child(4) { border-top-color: var(--amarelo-sol); }
+
+.cartao-grid .cartao p { color: var(--texto-claro); }
+
+/* Formulário de contato */
+.form-contato {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.form-contato .campo { margin-bottom: 20px; }
+
+.form-contato label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.form-contato input,
+.form-contato textarea,
+.form-contato select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 2px solid #ddd5c7;
+  border-radius: 6px;
+  font: inherit;
+  font-size: 1rem;
+  background: var(--branco);
+}
+
+.form-contato input:focus-visible,
+.form-contato textarea:focus-visible,
+.form-contato select:focus-visible {
+  outline: 3px solid var(--amarelo-sol);
+  border-color: var(--verde-folha);
+  outline-offset: 1px;
+}
+
+.form-contato textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.form-contato .campo-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.form-contato .campo-check input {
+  width: auto;
+  margin-top: 4px;
+}
+
+.form-contato button {
+  background: var(--terracota);
+  color: var(--branco);
+  border: 0;
+  padding: 14px 36px;
+  border-radius: 6px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.form-contato button:hover { background: #b36a3a; }
+
+.form-contato button:focus-visible {
+  outline: 3px solid var(--amarelo-sol);
+  outline-offset: 2px;
+}
+
+/* Container de vídeo responsivo (16:9) */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-top: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .15);
+}
+
+.video-container iframe,
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Áudio */
+.audio-section audio {
+  width: 100%;
+  margin-top: 16px;
+}
+
+/* Lista de referências */
+.lista-referencias {
+  list-style: none;
+  padding: 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.lista-referencias li {
+  padding: 16px 0;
+  border-bottom: 1px solid #e5ddd0;
+}
+
+.lista-referencias li:last-child { border-bottom: 0; }
+
+.lista-referencias a { word-break: break-word; }
+
+/* Grid de contato (info + formulário) */
+.contato-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.contato-info p { margin-bottom: 10px; }
+
+/* Mapa */
+.mapa-container {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .12);
+  margin-top: 16px;
+}
+
+.mapa-container iframe {
+  display: block;
+  width: 100%;
+  height: 300px;
+  border: 0;
+}
+
+/* Links de retorno */
+.voltar {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Responsividade */
+@media (max-width: 700px) {
+  .contato-grid { grid-template-columns: 1fr; }
+  .page-hero h1 { font-size: 1.8rem; }
+  .page-hero { padding: 60px 0; }
+}
+
+footer h2 {
+  color: var(--branco);
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+
+.skip-link {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 10000;
+  padding: 10px 14px;
+  color: #000;
+  background: #fff;
+  border: 2px solid #000;
+  transform: translateY(-150%);
+}
+
+.skip-link:focus { transform: translateY(0); }
+
+.educacao-grid { width: 100%; max-width: 1100px; }
+.textoefoto { width: 100%; max-width: 480px; }
+
+.form-contato input,
+.form-contato textarea,
+.form-contato select { border-color: #767676; }
+
+.form-contato button { background: #93431e; color: #fff; }
+.form-contato button:hover { background: #773719; }
+
+header nav a:hover { color: #8f4728; }
+.botao-primario { color: #17130f; }
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+iframe:focus-visible,
+.botao:focus-visible,
+.menu-toggle:focus-visible {
+  outline: 3px solid #000;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+</style>
+<meta name="description" content="A relação entre inclusão social e sustentabilidade: como acolher imigrantes e estrangeiros contribui para uma sociedade mais justa e sustentável.">
+</head>
+<body>
+
+<a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
+<header>
+  <div class="container">
+    <a href="index.html" class="logo">Raízes</a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav id="menu" aria-label="Menu principal">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="imigrantes.html">Imigrantes</a></li>
+        <li><a href="educacao.html">Educação</a></li>
+        <li><a href="desafios.html">Desafios</a></li>
+        <li><a href="sustentabilidade.html" aria-current="page">Sustentabilidade</a></li>
+        <li><a href="edu_sustentável.html">Edu. Sustentável</a></li>
+        <li><a href="projetos_iniciativas.html">Projetos</a></li>
+        <li><a href="ajudar.html">Ajudar</a></li>
+        <li><a href="fontes.html">Fontes</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo-principal" tabindex="-1">
+  <section class="page-hero">
+    <div class="container">
+      <h1>Sustentabilidade</h1>
+      <p>A sustentabilidade vai além da preservação do meio ambiente: ela também envolve a construção de uma sociedade mais justa, inclusiva e igualitária, na qual todas as pessoas têm acesso a educação, trabalho e oportunidades.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="com-foto">
+        <div>
+          <h2>Inclusão social e sustentabilidade</h2>
+          <p>Promover a inclusão social de pessoas imigrantes, refugiadas e estrangeiras significa reconhecer suas histórias, culturas e contribuições, garantindo acesso à educação, ao trabalho e às oportunidades. Ao valorizar a diversidade e combater a exclusão, construímos comunidades mais acolhedoras e fortalecemos um futuro sustentável, no qual todas as pessoas podem participar, desenvolver seu potencial e contribuir para o crescimento da sociedade.</p>
+          <p>Uma comunidade que acolhe é uma comunidade que cresce: a diversidade traz novas ideias, soluções criativas e fortalece os laços entre as pessoas. Sustentabilidade e inclusão caminham juntas, pois ambas buscam garantir dignidade no presente sem comprometer as oportunidades das futuras gerações.</p>
+        </div>
+        <figure class="foto">
+          <img src="https://uploads-planetacampo.canalrural.com.br/sites/9/2025/03/campanha-de-plantacao-de-maos-para-salvar-o-meio-ambiente-1536x1024-1.jpg"
+               alt="Várias mãos segurando mudas de árvores, simbolizando a sustentabilidade e o cuidado com o meio ambiente"
+               width="600" height="400" loading="lazy">
+          <figcaption>Foto: Planeta Campo</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="educacao-inclusao">
+    <div class="container">
+      <div class="section-intro">
+        <h2>Os três pilares da sustentabilidade</h2>
+        <p>A sustentabilidade se apoia em três pilares que precisam caminhar juntos. Quando um deles é negligenciado, o equilíbrio se rompe e a sociedade como um todo perde.</p>
+      </div>
+      <div class="educacao-grid">
+        <article class="valor">
+          <h3>Pilar social</h3>
+          <p>Garantir direitos, reduzir desigualdades e promover a inclusão de todos, independentemente de origem, idioma ou cultura. É o pilar que mais se conecta com o acolhimento de imigrantes.</p>
+        </article>
+        <article class="valor">
+          <h3>Pilar ambiental</h3>
+          <p>Preservar os recursos naturais, reduzir o descarte inadequado de materiais e ampliar a educação ambiental nas escolas, formando cidadãos conscientes do seu impacto no planeta.</p>
+        </article>
+        <article class="valor">
+          <h3>Pilar econômico</h3>
+          <p>Gerar trabalho, renda e oportunidades de forma justa, para que imigrantes e refugiados possam se sustentar e contribuir economicamente para a comunidade que os acolhe.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="com-foto inverso">
+        <div>
+          <h2>Kit de Acolhimento sustentável</h2>
+          <p>No projeto Raízes, a sustentabilidade também está presente na prática. O Kit de Acolhimento entregue ao aluno imigrante ou estrangeiro que chega à escola será produzido com materiais recicláveis, incentivando desde o primeiro dia o cuidado com o meio ambiente.</p>
+          <p>O projeto também propõe a coleta seletiva e a educação ambiental por meio de ações que envolvem alunos imigrantes, estrangeiros e brasileiros juntos. Quando todos participam de atividades como hortas escolares, campanhas de reciclagem e projetos de reflorestamento, o aprendizado acontece de forma colaborativa e a sustentabilidade deixa de ser um conceito distante para se tornar parte do dia a dia.</p>
+        </div>
+        <figure class="foto">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu1yWaGORphq-8AaK25fhGlW4kWa8CTCSUqbvuR6ZEDZyWMvdm3v9wkPk&s=10"
+               alt="Crianças mostrando mochilas sobre projeto sobre a preservação do meio ambiente"
+               width="600" height="400" loading="lazy">
+          <figcaption>Foto: Prefeitura de Manaus</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="educacao-inclusao">
+    <div class="container">
+      <div class="section-intro">
+        <h2>Sustentabilidade no ambiente digital</h2>
+        <p>O compromisso com a sustentabilidade também se reflete no próprio site do projeto Raízes. Pequenas escolhas técnicas ajudam a reduzir o consumo de recursos.</p>
+      </div>
+      <div class="educacao-grid">
+        <article class="valor">
+          <h3>Imagens otimizadas</h3>
+          <p>As imagens são comprimidas e carregadas de forma eficiente, reduzindo o consumo de dados e energia tanto no servidor quanto no dispositivo do visitante.</p>
+        </article>
+        <article class="valor">
+          <h3>Código limpo</h3>
+          <p>O código é organizado e sem redundâncias, o que torna as páginas mais leves e rápidas de carregar, economizando recursos computacionais.</p>
+        </article>
+        <article class="valor">
+          <h3>Hospedagem verde</h3>
+          <p>A equipe considera a escolha de hospedagem em provedores que utilizam energia renovável, alinhando a infraestrutura digital aos princípios do projeto.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <h2>Como a educação contribui para a sustentabilidade?</h2>
+      <p>A educação é um dos caminhos mais eficazes para formar cidadãos conscientes e responsáveis. Descubra como a escola pode ser protagonista dessa mudança.</p>
+      <div class="saiba-mais">
+        <a href="edu_sustentável.html" class="botao botao-secundario" aria-label="Saiba mais sobre educação sustentável">Conheça a educação sustentável</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-colunas">
+      <div>
+        <h2>Projetos</h2>
+        <ul>
+          <li><a href="sobre.html">Quem somos</a></li>
+          <li><a href="projetos_iniciativas.html">Aluno parceiro</a></li>
+          <li><a href="projetos_iniciativas.html">Kit de acolhimento</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Aprenda</h2>
+        <ul>
+          <li><a href="imigrantes.html">Imigrantes e estrangeiros</a></li>
+          <li><a href="edu_sustentável.html">Educação sustentável</a></li>
+          <li><a href="sustentabilidade.html">Sustentabilidade</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Participe</h2>
+        <ul>
+          <li><a href="projetos_iniciativas.html">Projetos e iniciativas</a></li>
+          <li><a href="ajudar.html">Como ajudar</a></li>
+          <li><a href="fontes.html">Fontes e contatos</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-copyright">© 2026 Raízes. Um só solo, muitas raízes. Inclusão de imigrantes e estrangeiros no Brasil.</p>
+  </div>
+</footer>
+
+<script>
+  const btn = document.querySelector('.menu-toggle');
+  const menu = document.getElementById('menu');
+
+  function fecharMenu() {
+    menu.classList.remove('aberto');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.textContent = 'Menu';
+  }
+
+  btn.addEventListener('click', () => {
+    const aberto = menu.classList.toggle('aberto');
+    btn.setAttribute('aria-expanded', aberto);
+    btn.textContent = aberto ? 'Fechar' : 'Menu';
+  });
+
+  menu.querySelectorAll('a').forEach(link => link.addEventListener('click', fecharMenu));
+
+  document.addEventListener('keydown', evento => {
+    if (evento.key === 'Escape' && menu.classList.contains('aberto')) {
+      fecharMenu();
+      btn.focus();
+    }
+  });
+</script>
+
+</body>
+</html>
