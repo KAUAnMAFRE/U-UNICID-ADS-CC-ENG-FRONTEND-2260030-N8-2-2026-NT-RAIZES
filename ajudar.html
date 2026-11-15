@@ -437,6 +437,49 @@ header nav a:focus-visible {
   margin-bottom: 16px;
 }
 
+.ong-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.ong-link .projeto {
+  height: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  position: relative;
+}
+
+.ong-link:hover .projeto,
+.ong-link:focus-visible .projeto {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(58, 125, 68, 0.18);
+  border-top-color: var(--azul-ceu);
+  cursor: pointer;
+}
+
+.ong-link .projeto::after {
+  content: "Abrir site";
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(3, 85, 161, 0.12);
+  color: var(--azul-ceu);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  transform: translateY(6px);
+}
+
+.ong-link:hover .projeto::after,
+.ong-link:focus-visible .projeto::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .com-foto .foto img,
 .hero-foto img {
   aspect-ratio: 3 / 2;
@@ -854,21 +897,29 @@ footer h4 { margin-top: 0; }
         <p>Conheça organizações que oferecem apoio a imigrantes e refugiados no Brasil e descubra como se aproximar delas para doar, ser voluntário ou firmar parcerias.</p>
       </div>
       <div class="projetos-grid">
-        <article class="projeto">
-          <img src="https://www.caritas-rj.org.br/uploads/6/5/1/7/65174051/mutir-o-venezuelanos-1_orig.jpg" width="400" height="180" loading="lazy" alt="Voluntários acolhendo famílias imigrantes">
-          <h3>Cáritas Brasileira</h3>
-          <p>Organização ligada à Igreja Católica que atua há décadas no acolhimento de migrantes e refugiados, oferecendo apoio social, jurídico e integração comunitária em diversas regiões do Brasil.</p>
-        </article>
-        <article class="projeto">
-          <img src="https://consed.org.br/storage/cache/news_760x470/media/image/news/5dd2cb8b5e9e9.jpg" width="400" height="180" loading="lazy" alt="Alunos em atividade escolar colaborativa">
-          <h3>ACNUR Brasil</h3>
-          <p>A Agência da ONU para Refugiados atua no Brasil protegendo pessoas forçadas a fugir de guerras e perseguições, oferecendo acolhimento, documentação e acesso a serviços como educação e saúde.</p>
-        </article>
-        <article class="projeto">
-          <img src="https://www.cnj.jus.br/wp-content/uploads/2020/01/RR-innovare.jpg" width="400" height="180" loading="lazy" alt="Professores em formação sobre acolhimento">
-          <h3>Missão Paz</h3>
-          <p>Organização em São Paulo que acolhe migrantes e refugiados com serviços de alimentação, apoio jurídico, aulas de português e mediação para acesso ao mercado de trabalho.</p>
-        </article>
+        <a class="ong-link" href="https://caritas.org.br/" target="_blank" rel="noopener noreferrer" aria-label="Abrir site da Cáritas Brasileira em nova aba">
+          <article class="projeto">
+            <img src="https://www.caritas-rj.org.br/uploads/6/5/1/7/65174051/mutir-o-venezuelanos-1_orig.jpg" width="400" height="180" loading="lazy" alt="Voluntários acolhendo famílias imigrantes">
+            <h3>Cáritas Brasileira</h3>
+            <p>Organização ligada à Igreja Católica que atua há décadas no acolhimento de migrantes e refugiados, oferecendo apoio social, jurídico e integração comunitária em diversas regiões do Brasil.</p>
+          </article>
+        </a>
+
+        <a class="ong-link" href="https://www.acnur.org/portugues" target="_blank" rel="noopener noreferrer" aria-label="Abrir site da ACNUR Brasil em nova aba">
+          <article class="projeto">
+            <img src="https://consed.org.br/storage/cache/news_760x470/media/image/news/5dd2cb8b5e9e9.jpg" width="400" height="180" loading="lazy" alt="Alunos em atividade escolar colaborativa">
+            <h3>ACNUR Brasil</h3>
+            <p>A Agência da ONU para Refugiados atua no Brasil protegendo pessoas forçadas a fugir de guerras e perseguições, oferecendo acolhimento, documentação e acesso a serviços como educação e saúde.</p>
+          </article>
+        </a>
+
+        <a class="ong-link" href="https://www.missaopaz.org.br/" target="_blank" rel="noopener noreferrer" aria-label="Abrir site da Missão Paz em nova aba">
+          <article class="projeto">
+            <img src="https://www.cnj.jus.br/wp-content/uploads/2020/01/RR-innovare.jpg" width="400" height="180" loading="lazy" alt="Professores em formação sobre acolhimento">
+            <h3>Missão Paz</h3>
+            <p>Organização em São Paulo que acolhe migrantes e refugiados com serviços de alimentação, apoio jurídico, aulas de português e mediação para acesso ao mercado de trabalho.</p>
+          </article>
+        </a>
       </div>
     </div>
   </section>
