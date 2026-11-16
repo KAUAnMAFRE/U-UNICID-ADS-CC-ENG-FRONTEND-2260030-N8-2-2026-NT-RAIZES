@@ -808,6 +808,25 @@ footer h2 {
 .skip-link:focus { transform: translateY(0); }
 
 .educacao-grid { width: 100%; max-width: 1100px; }
+.sustentabilidade-digital-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 14px;
+  width: 100%;
+  margin: 30px auto 0;
+}
+.sustentabilidade-digital-grid .valor {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  min-width: 0;
+  margin-top: 0;
+}
+.sustentabilidade-digital-grid .valor p { flex: 1; }
+@media (max-width: 700px) {
+  .sustentabilidade-digital-grid { grid-template-columns: 1fr; }
+}
 .textoefoto { width: 100%; max-width: 480px; }
 
 .form-contato input,
@@ -945,7 +964,7 @@ iframe:focus-visible,
         <h2>Sustentabilidade no ambiente digital</h2>
         <p>O compromisso com a sustentabilidade também se reflete no próprio site do projeto Raízes. Pequenas escolhas técnicas ajudam a reduzir o consumo de recursos.</p>
       </div>
-      <div class="educacao-grid">
+      <div class="educacao-grid sustentabilidade-digital-grid">
         <article class="valor">
           <h3>Imagens otimizadas</h3>
           <p>As imagens são comprimidas e carregadas de forma eficiente, reduzindo o consumo de dados e energia tanto no servidor quanto no dispositivo do visitante.</p>

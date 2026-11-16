@@ -809,6 +809,25 @@ footer h2 {
 .skip-link:focus { transform: translateY(0); }
 
 .educacao-grid { width: 100%; max-width: 1100px; }
+.diversidade-escola-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 14px;
+  width: 100%;
+  margin: 30px auto 0;
+}
+.diversidade-escola-grid .valor {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  min-width: 0;
+  margin-top: 0;
+}
+.diversidade-escola-grid .valor p { flex: 1; }
+@media (max-width: 700px) {
+  .diversidade-escola-grid { grid-template-columns: 1fr; }
+}
 .textoefoto { width: 100%; max-width: 480px; }
 
 .form-contato input,
@@ -950,7 +969,7 @@ iframe:focus-visible,
         <h2>A diversidade na escola</h2>
         <p>Quando o acolhimento não acontece, o estudante estrangeiro corre o risco de ficar à margem da aprendizagem e da convivência com os colegas. Acolher bem esses alunos garante o direito à educação, valoriza a diversidade e ajuda toda a comunidade escolar a conviver com respeito às diferenças.</p>
       </div>
-      <div class="educacao-grid">
+      <div class="educacao-grid diversidade-escola-grid">
         <article class="valor">
           <h3>Diversidade cultural</h3>
           <p>Alunos de diferentes origens trazem línguas, comidas, músicas e histórias que enriquecem o ambiente escolar para todos.</p>
@@ -960,8 +979,8 @@ iframe:focus-visible,
           <p>Quando brasileiros e estrangeiros convivem, todos aprendem: o colega aprende o português e os brasileiros descobrem novas culturas.</p>
         </article>
         <article class="valor">
-          <h3>Sentimento de pertencimento <br></h3>
-          <p>Ser acolhido ajuda o aluno a sentir que faz parte da comunidade, o que melhora sua autoestima e seu desempenho escolar.<br><br></p>
+          <h3>Sentimento de pertencimento</h3>
+          <p>Ser acolhido ajuda o aluno a sentir que faz parte da comunidade, o que melhora sua autoestima e seu desempenho escolar.</p>
         </article>
       </div>
     </div>
