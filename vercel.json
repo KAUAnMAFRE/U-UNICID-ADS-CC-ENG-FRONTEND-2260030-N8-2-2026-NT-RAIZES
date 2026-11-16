@@ -3,16 +3,16 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/inicio/conteudo-principal", "destination": "/index.html" },
-    { "source": "/inicio/quem-somos", "destination": "/index.html" },
-    { "source": "/inicio/imigrantes-e-estrangeiros", "destination": "/index.html" },
-    { "source": "/inicio/educacao-inclusao", "destination": "/index.html" },
-    { "source": "/inicio/desafios-educacao", "destination": "/index.html" },
-    { "source": "/inicio/sustentabilidade", "destination": "/index.html" },
-    { "source": "/inicio/educacao-sustentavel", "destination": "/index.html" },
-    { "source": "/inicio/projetos-iniciativas", "destination": "/index.html" },
-    { "source": "/inicio/como-ajudar", "destination": "/index.html" },
-    { "source": "/inicio/contato", "destination": "/index.html" },
-    { "source": "/inicio/tradutores-libras", "destination": "/index.html" }
+    { "source": "/inicio/conteudo-principal", "destination": "/" },
+    { "source": "/inicio/quem-somos", "destination": "/" },
+    { "source": "/inicio/imigrantes-e-estrangeiros", "destination": "/" },
+    { "source": "/inicio/educacao-inclusao", "destination": "/" },
+    { "source": "/inicio/desafios-educacao", "destination": "/" },
+    { "source": "/inicio/sustentabilidade", "destination": "/" },
+    { "source": "/inicio/educacao-sustentavel", "destination": "/" },
+    { "source": "/inicio/projetos-iniciativas", "destination": "/" },
+    { "source": "/inicio/como-ajudar", "destination": "/" },
+    { "source": "/inicio/contato", "destination": "/" },
+    { "source": "/inicio/tradutores-libras", "destination": "/" }
   ]
 }
