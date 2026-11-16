@@ -7,6 +7,7 @@
     { "source": "/inicio/quem-somos", "destination": "/" },
     { "source": "/inicio/imigrantes-e-estrangeiros", "destination": "/" },
     { "source": "/inicio/educacao-inclusao", "destination": "/" },
+    { "source": "/inicio/desafios", "destination": "/" },
     { "source": "/inicio/desafios-educacao", "destination": "/" },
     { "source": "/inicio/sustentabilidade", "destination": "/" },
     { "source": "/inicio/educacao-sustentavel", "destination": "/" },
