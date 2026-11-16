@@ -808,6 +808,26 @@ footer h2 {
 .skip-link:focus { transform: translateY(0); }
 
 .educacao-grid { width: 100%; max-width: 1100px; }
+.educacao-praticas-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: 1fr;
+  align-items: stretch;
+  gap: 14px;
+  width: 100%;
+  margin: 30px auto 0;
+}
+.educacao-praticas-grid .valor {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  min-width: 0;
+  margin-top: 0;
+}
+.educacao-praticas-grid .valor p { flex: 1; }
+@media (max-width: 700px) {
+  .educacao-praticas-grid { grid-template-columns: 1fr; }
+}
 .textoefoto { width: 100%; max-width: 480px; }
 
 .form-contato input,
@@ -904,7 +924,7 @@ iframe:focus-visible,
         <h2>Como a educação contribui</h2>
         <p>A escola pode colaborar com a sustentabilidade de muitas formas práticas, envolvendo alunos imigrantes, estrangeiros e brasileiros em um mesmo objetivo.</p>
       </div>
-      <div class="educacao-grid">
+      <div class="educacao-grid educacao-praticas-grid">
         <article class="valor">
           <h3>Conscientização ambiental</h3>
           <p>Debates, oficinas e projetos sobre consumo consciente, descarte de resíduos e mudanças climáticas ajudam os alunos a entender seu impacto no planeta.</p>
