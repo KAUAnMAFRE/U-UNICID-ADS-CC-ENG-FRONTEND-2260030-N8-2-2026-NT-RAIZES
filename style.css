@@ -536,6 +536,19 @@ footer h2 {
   max-width: 480px;
 }
 
+.lista-tradutores {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px 24px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+}
+
+.lista-tradutores li {
+  padding: 8px 0;
+}
+
 .form-contato input,
 .form-contato textarea,
 .form-contato select {
