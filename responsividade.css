@@ -1,0 +1,196 @@
+img,
+video,
+svg,
+canvas {
+  max-width: 100%;
+}
+
+img,
+video {
+  height: auto;
+}
+
+iframe {
+  display: block;
+  max-width: 100%;
+}
+
+main,
+section,
+article,
+figure,
+.container,
+.hero-grid,
+.com-foto,
+.contato-grid,
+.missao-visao > div,
+.cartao,
+.valor,
+.desafio,
+.projeto,
+.contato-info,
+.form-contato {
+  min-width: 0;
+}
+
+.container {
+  width: 100%;
+}
+
+.container img,
+.container iframe,
+.contato-grid > *,
+.form-contato input,
+.form-contato select,
+.form-contato textarea {
+  max-width: 100%;
+}
+
+.page-hero {
+  padding-block: clamp(48px, 8vw, 90px);
+}
+
+.page-hero h1 {
+  font-size: clamp(1.8rem, 5vw, 2.4rem);
+}
+
+.page-hero p,
+.section-intro,
+.contato-info,
+.form-contato {
+  overflow-wrap: anywhere;
+}
+
+.cartao-grid,
+.missao-visao,
+.desafios-grid,
+.projetos-grid,
+.educacao-grid,
+.contato-grid,
+.footer-colunas,
+.acesso-educacao-grid,
+.diversidade-escola-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+}
+
+.educacao-grid,
+.textoefoto {
+  width: 100%;
+  max-width: 100%;
+}
+
+.educacao-container {
+  width: 100%;
+  min-width: 0;
+  max-width: 1200px;
+}
+
+.educacao-grid .valor {
+  width: auto;
+}
+
+.video-container {
+  width: 100%;
+  max-width: 100%;
+}
+
+.mapa-container iframe {
+  width: 100%;
+}
+
+.lista-referencias a,
+.lista-tradutores a,
+footer a,
+main a {
+  overflow-wrap: anywhere;
+}
+
+.form-contato input,
+.form-contato select,
+.form-contato textarea {
+  box-sizing: border-box;
+}
+
+.modal-conteudo {
+  max-width: calc(100vw - 32px);
+  max-height: calc(100vh - 32px);
+  overflow: auto;
+}
+
+@media (max-width: 760px) {
+  section {
+    padding-block: clamp(36px, 8vw, 56px);
+  }
+
+  .page-hero {
+    padding-block: clamp(44px, 9vw, 64px);
+  }
+
+  .page-hero p {
+    font-size: 1rem;
+  }
+
+  .hero-grid,
+  .com-foto,
+  .contato-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .com-foto.inverso .foto,
+  .hero-foto {
+    order: 0;
+  }
+
+  #missao {
+    height: auto;
+    padding-block: clamp(48px, 10vw, 72px);
+  }
+
+  #missao .quem-somos {
+    font-size: clamp(1.75rem, 6vw, 2.2rem);
+  }
+
+  .section-intro {
+    margin-bottom: 28px;
+  }
+
+  .contato-grid {
+    gap: 24px;
+  }
+
+  .mapa-container iframe {
+    height: 280px;
+  }
+
+  .footer-colunas {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .cartao-grid .cartao,
+  #missao .missao-visao > div {
+    padding: 20px 16px;
+  }
+
+  .botao,
+  .form-contato button {
+    max-width: 100%;
+  }
+
+  .botao {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-copyright {
+    font-size: 0.8rem;
+  }
+}

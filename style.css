@@ -672,3 +672,141 @@ iframe:focus-visible,
   background: var(--branco);
   color: var(--verde-folha);
 }
+
+/* Ajustes de layout para celulares e tablets */
+main,
+section,
+.container,
+.hero-grid,
+.com-foto,
+.missao-visao > div,
+.desafio,
+.projeto,
+.valor {
+  min-width: 0;
+}
+
+.container {
+  width: 100%;
+}
+
+.hero {
+  margin: 0;
+  padding: clamp(40px, 7vw, 80px) 0;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.hero-grid {
+  gap: clamp(24px, 5vw, 56px);
+}
+
+.texto1,
+.textoefoto {
+  max-width: 100%;
+}
+
+.com-foto {
+  gap: clamp(24px, 4vw, 40px);
+}
+
+.missao-visao,
+.desafios-grid,
+.projetos-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: clamp(16px, 3vw, 24px);
+}
+
+.educacao-grid {
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 20px;
+}
+
+.educacao-grid .valor {
+  width: auto;
+}
+
+.desafios-educacao,
+.sustentabilidade,
+.educacao-sustentavel {
+  margin-top: 0;
+}
+
+.sustentabilidade-content {
+  width: 100%;
+}
+
+.footer-colunas {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+}
+
+@media (max-width: 760px) {
+  section {
+    padding: clamp(36px, 8vw, 56px) 0;
+  }
+
+  .hero-grid,
+  .com-foto {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero-foto,
+  .com-foto.inverso .foto {
+    order: 0;
+  }
+
+  #missao {
+    padding: clamp(48px, 10vw, 72px) 0;
+  }
+
+  #missao .quem-somos {
+    font-size: clamp(1.75rem, 6vw, 2.2rem);
+  }
+
+  .estrangeiros {
+    margin-top: 40px;
+    gap: 24px;
+  }
+
+  .textoefoto {
+    text-align: left;
+  }
+
+  .cta h2 {
+    font-size: clamp(1.6rem, 6vw, 2rem);
+  }
+
+  .footer-colunas {
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  header .container {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .container,
+  .sustentabilidade-content {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .educacao-grid {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .botao {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-copyright {
+    font-size: 0.8rem;
+  }
+}
