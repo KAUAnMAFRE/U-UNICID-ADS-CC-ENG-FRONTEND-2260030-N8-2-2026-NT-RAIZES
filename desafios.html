@@ -808,6 +808,25 @@ footer h2 {
 .skip-link:focus { transform: translateY(0); }
 
 .educacao-grid { width: 100%; max-width: 1100px; }
+.acesso-educacao-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 14px;
+  width: 100%;
+  margin: 30px auto 0;
+}
+.acesso-educacao-grid .valor {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  min-width: 0;
+  margin-top: 0;
+}
+.acesso-educacao-grid .valor p { flex: 1; }
+@media (max-width: 700px) {
+  .acesso-educacao-grid { grid-template-columns: 1fr; }
+}
 .textoefoto { width: 100%; max-width: 480px; }
 
 .form-contato input,
@@ -904,7 +923,7 @@ iframe:focus-visible,
         <h2>Acesso à educação</h2>
         <p>O acesso à escola pode parecer simples, mas envolve uma série de etapas que nem sempre são claras para quem chega de outro país: encontrar uma vaga, entender o sistema de matrícula, conhecer os direitos do estudante e se locomover até a unidade escolar.</p>
       </div>
-      <div class="educacao-grid">
+      <div class="educacao-grid acesso-educacao-grid">
         <article class="valor">
           <h3>Direito garantido</h3>
           <p>A Constituição Federal e a Lei de Diretrizes e Bases da Educação garantem o acesso à escola pública a todas as crianças e adolescentes, independentemente de nacionalidade ou documentação.</p>
