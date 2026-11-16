@@ -845,6 +845,8 @@ iframe:focus-visible,
 </style>
 <meta name="description" content="Como a educação pode contribuir para a sustentabilidade e a colaboração, formando cidadãos conscientes e responsáveis.">
 <link rel="icon" type="image/png" href="/folha-verde.png">
+<link rel="stylesheet" href="/acessibilidade.css">
+<script src="/acessibilidade.js" defer></script>
 </head>
 <body>
 
@@ -930,10 +932,11 @@ iframe:focus-visible,
         <p>Ouve um trecho sobre a importância da educação ambiental nas escolas. Este recurso de áudio demonstra como conteúdos acessíveis podem complementar a leitura, especialmente para quem está aprendendo o português.</p>
       </div>
       <div class="audio-section">
-        <audio controls preload="none">
+        <audio controls preload="none" aria-describedby="descricao-audio">
           <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
           Seu navegador não suporta o elemento de áudio. <a href="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">Acesse o áudio aqui</a>.
         </audio>
+        <p id="descricao-audio">Áudio instrumental de demonstração, sem fala.</p>
         <p style="margin-top: 12px; font-size: 0.85rem; color: var(--texto-claro);">Áudio de demonstração. Em uma implementação completa, este espaço traria um podcast ou narração educativa sobre sustentabilidade e educação.</p>
       </div>
     </div>

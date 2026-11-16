@@ -7,6 +7,8 @@
 <link rel="stylesheet" href="/style.css">
 <meta name="description" content="Raízes promove a inclusão de imigrantes e refugiados no Brasil, construindo comunidades mais diversas, sustentáveis e resilientes.">
 <link rel="icon" type="image/png" href="/folha-verde.png">
+<link rel="stylesheet" href="/acessibilidade.css">
+<script src="/acessibilidade.js" defer></script>
 </head>
 <body>
 
@@ -284,6 +286,8 @@
   // deixa o menu responsivo
   const btn = document.querySelector('.menu-toggle');
   const menu = document.getElementById('menu');
+  const comportamentoRolagem = () =>
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
 
   function fecharMenu() {
     menu.classList.remove('aberto');
@@ -323,7 +327,7 @@
 
     destino.setAttribute('tabindex', '-1');
     destino.focus();
-    destino.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    destino.scrollIntoView({ behavior: comportamentoRolagem(), block: 'start' });
   }
 
   document.querySelectorAll('a[href^="/inicio/"]').forEach(link => {
@@ -341,7 +345,7 @@
     if (rota.startsWith('/inicio/')) {
       navegarParaRotaInicio(rota, false);
     } else if (rota === '/') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: comportamentoRolagem() });
     }
   });
 
