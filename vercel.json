@@ -1,5 +1,18 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/inicio/conteudo-principal", "destination": "/index.html" },
+    { "source": "/inicio/quem-somos", "destination": "/index.html" },
+    { "source": "/inicio/imigrantes-e-estrangeiros", "destination": "/index.html" },
+    { "source": "/inicio/educacao-inclusao", "destination": "/index.html" },
+    { "source": "/inicio/desafios-educacao", "destination": "/index.html" },
+    { "source": "/inicio/sustentabilidade", "destination": "/index.html" },
+    { "source": "/inicio/educacao-sustentavel", "destination": "/index.html" },
+    { "source": "/inicio/projetos-iniciativas", "destination": "/index.html" },
+    { "source": "/inicio/como-ajudar", "destination": "/index.html" },
+    { "source": "/inicio/contato", "destination": "/index.html" },
+    { "source": "/inicio/tradutores-libras", "destination": "/index.html" }
+  ]
 }

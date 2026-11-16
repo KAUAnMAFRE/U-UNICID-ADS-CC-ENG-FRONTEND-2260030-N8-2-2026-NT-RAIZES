@@ -10,22 +10,22 @@
 </head>
 <body>
 
-<a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
+<a class="skip-link" href="/inicio/conteudo-principal">Pular para o conteúdo principal</a>
 <header>
   <div class="container">
-    <a href="#" class="logo">Raízes</a>
+    <a href="/" class="logo">Raízes</a>
 
     <button class="menu-toggle" aria-expanded="false" aria-controls="menu">Menu</button>
 
     <nav id="menu" aria-label="Menu principal">
       <ul>
-        <li><a href="#missao">Quem somos</a></li>
-        <li><a href="#imigrantes-estrangeiros">Imigrantes e estrangeiros</a></li>
-        <li><a href="#educacao-inclusao">Educação e inclusão</a></li>
-        <li><a href="#Desafios-educacao">Desafios da educação</a></li>
-        <li><a href="#sustentabilidade">Sustentabilidade</a></li>
-        <li><a href="#educacao-sustentavel">Educação sustentável</a></li>
-        <li><a href="#projetos--iniciativas">Projetos e iniciativas</a></li>
+        <li><a href="/inicio/quem-somos">Quem somos</a></li>
+        <li><a href="/inicio/imigrantes-e-estrangeiros">Imigrantes e estrangeiros</a></li>
+        <li><a href="/inicio/educacao-inclusao">Educação e inclusão</a></li>
+        <li><a href="/inicio/desafios-educacao">Desafios da educação</a></li>
+        <li><a href="/inicio/sustentabilidade">Sustentabilidade</a></li>
+        <li><a href="/inicio/educacao-sustentavel">Educação sustentável</a></li>
+        <li><a href="/inicio/projetos-iniciativas">Projetos e iniciativas</a></li>
       </ul>
     </nav>
   </div>
@@ -38,7 +38,7 @@
         <h1>Um só solo, muitas raízes</h1>
         <p class="texto1">Apoiamos imigrantes e refugiados a reconstruir suas vidas no Brasil, com acolhimento, oportunidade e uma comunidade que cresce junto.</p>
         <div class="botoes">
-          <a href="#como-ajudar" class="botao botao-secundario">Como ajudar</a>
+          <a href="/inicio/como-ajudar" class="botao botao-secundario">Como ajudar</a>
         </div>
       </div>
 
@@ -259,24 +259,24 @@
       <div>
         <h2>Projetos</h2>
         <ul>
-          <li><a href="#missao">Quem somos</a></li>
-          <li><a href="#educacao-inclusao">Aluno parceiro</a></li>
-          <li><a href="#projetos--iniciativas">Kit de acolhimento</a></li>
+          <li><a href="/inicio/quem-somos">Quem somos</a></li>
+          <li><a href="/inicio/educacao-inclusao">Aluno parceiro</a></li>
+          <li><a href="/inicio/projetos-iniciativas">Kit de acolhimento</a></li>
         </ul>
       </div>
       <div>
         <h2>Aprenda</h2>
         <ul>
-          <li><a href="#imigrantes-estrangeiros">Imigrantes e estrangeiros</a></li>
-          <li><a href="#educacao-sustentavel">Educação sustentável</a></li>
-          <li><a href="#sustentabilidade">Sustentabilidade</a></li>
+          <li><a href="/inicio/imigrantes-e-estrangeiros">Imigrantes e estrangeiros</a></li>
+          <li><a href="/inicio/educacao-sustentavel">Educação sustentável</a></li>
+          <li><a href="/inicio/sustentabilidade">Sustentabilidade</a></li>
         </ul>
       </div>
       <div>
         <h2>Participe</h2>
         <ul>
-          <li><a href="#projetos--iniciativas">Projetos e iniciativas</a></li>
-          <li><a href="#como-ajudar">Como ajudar</a></li>
+          <li><a href="/inicio/projetos-iniciativas">Projetos e iniciativas</a></li>
+          <li><a href="/inicio/como-ajudar">Como ajudar</a></li>
           <li><a href="fontes.html">Fontes e contatos</a></li>
         </ul>
       </div>
@@ -311,14 +311,58 @@
     btn.textContent = aberto ? 'Fechar' : 'Menu';
   });
 
-  menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
-    const destino = document.querySelector(link.hash);
-    if (destino) {
-      destino.setAttribute('tabindex', '-1');
-      destino.focus();
+  const destinosInicio = {
+    'conteudo-principal': 'conteudo-principal',
+    'quem-somos': 'missao',
+    'imigrantes-e-estrangeiros': 'imigrantes-estrangeiros',
+    'educacao-inclusao': 'educacao-inclusao',
+    'desafios-educacao': 'Desafios-educacao',
+    sustentabilidade: 'sustentabilidade',
+    'educacao-sustentavel': 'educacao-sustentavel',
+    'projetos-iniciativas': 'projetos--iniciativas',
+    'como-ajudar': 'como-ajudar',
+    contato: 'contato',
+    'tradutores-libras': 'tradutores-libras'
+  };
+
+  function navegarParaRotaInicio(caminho, atualizarHistorico) {
+    const slug = caminho.split('/').filter(Boolean).pop();
+    const id = destinosInicio[slug];
+    const destino = id && document.getElementById(id);
+
+    if (!destino) return;
+
+    if (atualizarHistorico && window.location.pathname !== caminho) {
+      window.history.pushState({}, '', caminho);
     }
-    fecharMenu();
-  }));
+
+    destino.setAttribute('tabindex', '-1');
+    destino.focus();
+    destino.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  document.querySelectorAll('a[href^="/inicio/"]').forEach(link => {
+    link.addEventListener('click', evento => {
+      if (evento.button !== 0 || evento.metaKey || evento.ctrlKey || evento.shiftKey || evento.altKey) return;
+
+      evento.preventDefault();
+      fecharMenu();
+      navegarParaRotaInicio(link.pathname, true);
+    });
+  });
+
+  window.addEventListener('popstate', () => {
+    const rota = window.location.pathname;
+    if (rota.startsWith('/inicio/')) {
+      navegarParaRotaInicio(rota, false);
+    } else if (rota === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  });
+
+  if (window.location.pathname.startsWith('/inicio/')) {
+    navegarParaRotaInicio(window.location.pathname, false);
+  }
 
   document.addEventListener('keydown', evento => {
     if (evento.key === 'Escape' && menu.classList.contains('aberto')) {
