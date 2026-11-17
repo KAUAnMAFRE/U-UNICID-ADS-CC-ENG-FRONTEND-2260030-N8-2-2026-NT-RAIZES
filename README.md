@@ -68,3 +68,5 @@ O que pode atrasar ou impedir a entrega são falhas nos códigos, prazo curto en
 10.	Critérios de Aceitação
 O site será considerado pronto quando tiver as 10 páginas navegáveis e interligadas, o formulário de contato validado, os recursos de vídeo, áudio e iframe funcionando, a acessibilidade aplicada, o código sem erros no validador do W3C e a documentação completa na pasta docs, com README, diário de bordo, orçamento de hospedagem e domínio e evidências de testes. A entrega inclui ainda o arquivo compactado do projeto, o print da interface e o documento com os nomes dos integrantes.
 
+11.	Envio de confirmação por e-mail
+O formulário de contato envia uma confirmação automática ao endereço informado usando EmailJS. O serviço Gmail, o template de confirmação e a Public Key precisam estar configurados no EmailJS; o template usa as variáveis `to_email`, `nome` e `assunto`. O envio pelo navegador também depende de o domínio do site estar permitido nas configurações do EmailJS. A confirmação não substitui uma resposta pessoal da equipe.

@@ -282,6 +282,16 @@ header nav a:hover {
   color: var(--texto);
 }
 
+.campo-armadilha {
+  position: absolute;
+  left: -10000px;
+}
+
+.form-contato #form-status {
+  color: #b42318;
+  margin: 0;
+}
+
 .educacao-container {
   width: 0%;
   max-width: 1200px;
@@ -1013,7 +1023,7 @@ iframe:focus-visible,
       <div class="contato-grid">
         <div class="contato-info">
           <h3>Equipe Raízes</h3>
-          <p><strong>E-mail:</strong> contato@raizes.org.br</p>
+          <p><strong>E-mail:</strong> <a href="mailto:contacts.raizes@gmail.com">contacts.raizes@gmail.com</a></p>
           <p><strong>Telefone:</strong> (11) 4002-8922</p>
           <p><strong>Endereço:</strong> Universidade Cidade de São Paulo (UNICID) — São Paulo, SP</p>
           <p>Integrantes: Julia Ayomide, Guilherme Alves, Gabriel Chaves, Gustavo Cruz e Kauan de Lima Freitas.</p>
@@ -1077,6 +1087,12 @@ iframe:focus-visible,
             <label for="consentimento">Concordo em receber retorno da equipe Raízes pelo e-mail informado. *</label>
           </div>
 
+          <div class="campo campo-armadilha" aria-hidden="true">
+            <label for="site">Deixe este campo vazio</label>
+            <input type="text" id="site" name="site" tabindex="-1" autocomplete="off">
+          </div>
+
+          <p id="form-status" role="alert" hidden></p>
           <button type="submit">Enviar mensagem</button>
         </form>
       </div>
@@ -1087,7 +1103,7 @@ iframe:focus-visible,
     <div class="modal-conteudo" role="dialog" aria-modal="true" aria-labelledby="modal-titulo" aria-describedby="modal-descricao" tabindex="-1">
       <button class="modal-fechar" type="button" aria-label="Fechar modal">×</button>
       <h3 id="modal-titulo">Sucesso!</h3>
-      <p id="modal-descricao" aria-live="polite">Mensagem enviada com sucesso! Agradecemos o contato.</p>
+      <p id="modal-descricao" aria-live="polite">Confirmação enviada ao e-mail informado. Agradecemos o contato.</p>
       <button type="button" class="modal-botao">OK</button>
     </div>
   </div>
@@ -1134,8 +1150,13 @@ iframe:focus-visible,
 </div>
 <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
 <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
 <script>
+  if (window.emailjs) {
+    emailjs.init({ publicKey: '5NvlOez6YuG0fx4Rb' });
+  }
+
   // Menu responsivo
   const btn = document.querySelector('.menu-toggle');
   const menu = document.getElementById('menu');
@@ -1166,6 +1187,8 @@ iframe:focus-visible,
   const modal = document.getElementById('modal-sucesso');
   const fecharModal = document.querySelector('.modal-fechar');
   const confirmarModal = document.querySelector('.modal-botao');
+  const statusForm = document.getElementById('form-status');
+  const botaoEnviar = form.querySelector('button[type="submit"]');
 
   function abrirModal() {
     focoAnterior = document.activeElement;
@@ -1202,14 +1225,37 @@ iframe:focus-visible,
     }
   });
 
-  form.addEventListener('submit', function (evento) {
+  form.addEventListener('submit', async function (evento) {
     evento.preventDefault();
 
-    if (form.checkValidity()) {
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    statusForm.hidden = true;
+    botaoEnviar.disabled = true;
+    botaoEnviar.textContent = 'Enviando...';
+
+    try {
+      if (!window.emailjs) {
+        throw new Error('O serviço de e-mail não carregou.');
+      }
+
+      await emailjs.send('service_3wq6mjq', 'template_yqlk67t', {
+        to_email: form.elements.email.value.trim(),
+        nome: form.elements.nome.value.trim(),
+        assunto: form.elements.assunto.selectedOptions[0].textContent.trim()
+      });
+
       abrirModal();
       form.reset();
-    } else {
-      form.reportValidity();
+    } catch {
+      statusForm.textContent = 'Não foi possível enviar sua mensagem agora. Tente novamente mais tarde.';
+      statusForm.hidden = false;
+    } finally {
+      botaoEnviar.disabled = false;
+      botaoEnviar.textContent = 'Enviar mensagem';
     }
   });
 </script>
