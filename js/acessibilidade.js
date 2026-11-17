@@ -77,6 +77,7 @@
     if (!widget.contains(event.target) && !panel.hidden) closePanel();
   });
 
+  // Permite fechar o painel com Esc e navegar ao conteudo ou menu usando Alt+1 e Alt+2.
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape' && !panel.hidden) {
       closePanel();
