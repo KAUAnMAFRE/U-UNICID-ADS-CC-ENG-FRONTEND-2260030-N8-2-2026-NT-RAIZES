@@ -20,7 +20,6 @@
         <button type="button" data-action="stop" disabled>Parar leitura</button>
       </div>
       <p class="accessibility-shortcuts">Atalhos: Alt+1 vai ao conteúdo; Alt+2 vai ao menu.</p>
-      <a class="accessibility-page-link" href="/acessibilidade.html">Página de acessibilidade</a>
     </section>
     <p class="accessibility-status" aria-live="polite" aria-atomic="true"></p>
   `;
@@ -61,6 +60,67 @@
     }, 20);
   };
 
+  const preferenceKey = 'raizes-accessibility-preferences';
+  let storageAvailable = true;
+  let savedPreferences = {};
+  try {
+    const storedPreferences = localStorage.getItem(preferenceKey);
+    if (storedPreferences) {
+      const parsedPreferences = JSON.parse(storedPreferences);
+      if (parsedPreferences && typeof parsedPreferences === 'object' && !Array.isArray(parsedPreferences)) {
+        savedPreferences = parsedPreferences;
+      }
+    }
+  } catch {
+    storageAvailable = false;
+  }
+
+  const setTogglePreference = (action, className, enabledLabel, disabledLabel, enabled) => {
+    document.body.classList.toggle(className, enabled);
+    const button = buttons.get(action);
+    button.setAttribute('aria-pressed', String(enabled));
+    button.textContent = enabled ? enabledLabel : disabledLabel;
+  };
+
+  const isSavedToggle = key => savedPreferences[key] === true;
+  setTogglePreference('contrast', 'a11y-contrast', 'Alto contraste: ativado', 'Alto contraste: desativado', isSavedToggle('contrast'));
+  setTogglePreference('dark', 'a11y-dark', 'Modo escuro: ativado', 'Modo escuro: desativado', isSavedToggle('dark'));
+  setTogglePreference('spacing', 'a11y-spacing', 'Espaçamento ampliado', 'Espaçamento padrão', isSavedToggle('spacing'));
+  setTogglePreference('font', 'a11y-readable-font', 'Fonte legível: ativada', 'Fonte legível: desativada', isSavedToggle('readableFont'));
+
+  if (Number.isInteger(savedPreferences.fontScale)
+    && savedPreferences.fontScale >= 100
+    && savedPreferences.fontScale <= 200
+    && savedPreferences.fontScale % 10 === 0) {
+    fontScale = savedPreferences.fontScale;
+    document.documentElement.style.setProperty('--a11y-font-scale', `${fontScale}%`);
+  }
+
+  const savePreferences = () => {
+    if (!storageAvailable) return false;
+
+    try {
+      localStorage.setItem(preferenceKey, JSON.stringify({
+        contrast: document.body.classList.contains('a11y-contrast'),
+        dark: document.body.classList.contains('a11y-dark'),
+        spacing: document.body.classList.contains('a11y-spacing'),
+        readableFont: document.body.classList.contains('a11y-readable-font'),
+        fontScale
+      }));
+      return true;
+    } catch {
+      storageAvailable = false;
+      return false;
+    }
+  };
+
+  const announcePreference = message => {
+    if (!savePreferences()) {
+      message += ' A preferência foi aplicada, mas não pôde ser salva neste navegador.';
+    }
+    announce(message);
+  };
+
   function closePanel() {
     panel.hidden = true;
     launcher.setAttribute('aria-expanded', 'false');
@@ -77,6 +137,7 @@
     if (!widget.contains(event.target) && !panel.hidden) closePanel();
   });
 
+  // Permite fechar o painel com Esc e navegar ao conteúdo ou menu usando Alt+1 e Alt+2.
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape' && !panel.hidden) {
       closePanel();
@@ -100,40 +161,40 @@
     const enabled = document.body.classList.toggle('a11y-contrast');
     event.currentTarget.setAttribute('aria-pressed', String(enabled));
     event.currentTarget.textContent = `Alto contraste: ${enabled ? 'ativado' : 'desativado'}`;
-    announce(enabled ? 'Alto contraste ativado.' : 'Alto contraste desativado.');
+    announcePreference(enabled ? 'Alto contraste ativado.' : 'Alto contraste desativado.');
   });
 
   buttons.get('dark').addEventListener('click', event => {
     const enabled = document.body.classList.toggle('a11y-dark');
     event.currentTarget.setAttribute('aria-pressed', String(enabled));
     event.currentTarget.textContent = `Modo escuro: ${enabled ? 'ativado' : 'desativado'}`;
-    announce(enabled ? 'Modo escuro ativado.' : 'Modo escuro desativado.');
+    announcePreference(enabled ? 'Modo escuro ativado.' : 'Modo escuro desativado.');
   });
 
   buttons.get('font-increase').addEventListener('click', () => {
     fontScale = Math.min(200, fontScale + 10);
     document.documentElement.style.setProperty('--a11y-font-scale', `${fontScale}%`);
-    announce(`Tamanho do texto: ${fontScale} por cento.`);
+    announcePreference(`Tamanho do texto: ${fontScale} por cento.`);
   });
 
   buttons.get('font-decrease').addEventListener('click', () => {
     fontScale = Math.max(100, fontScale - 10);
     document.documentElement.style.setProperty('--a11y-font-scale', `${fontScale}%`);
-    announce(`Tamanho do texto: ${fontScale} por cento.`);
+    announcePreference(`Tamanho do texto: ${fontScale} por cento.`);
   });
 
   buttons.get('spacing').addEventListener('click', event => {
     const enabled = document.body.classList.toggle('a11y-spacing');
     event.currentTarget.setAttribute('aria-pressed', String(enabled));
     event.currentTarget.textContent = enabled ? 'Espaçamento ampliado' : 'Espaçamento padrão';
-    announce(enabled ? 'Espaçamento ampliado.' : 'Espaçamento padrão restaurado.');
+    announcePreference(enabled ? 'Espaçamento ampliado.' : 'Espaçamento padrão restaurado.');
   });
 
   buttons.get('font').addEventListener('click', event => {
     const enabled = document.body.classList.toggle('a11y-readable-font');
     event.currentTarget.setAttribute('aria-pressed', String(enabled));
     event.currentTarget.textContent = enabled ? 'Fonte legível: ativada' : 'Fonte legível: desativada';
-    announce(enabled ? 'Fonte legível ativada.' : 'Fonte original restaurada.');
+    announcePreference(enabled ? 'Fonte legível ativada.' : 'Fonte original restaurada.');
   });
 
   buttons.get('read').addEventListener('click', () => {
