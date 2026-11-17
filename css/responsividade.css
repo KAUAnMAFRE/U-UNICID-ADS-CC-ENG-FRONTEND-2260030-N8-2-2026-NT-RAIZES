@@ -194,3 +194,20 @@ main a {
     font-size: 0.8rem;
   }
 }
+header .topo__logo {
+  display: inline-block;
+  line-height: 0;
+}
+
+header .topo__logo img {
+  display: block;
+  height: 110px;
+  width: auto;
+  max-width: 100%;
+}
+
+@media (max-width: 600px) {
+  header .topo__logo img {
+    height: 80px;
+  }
+}
